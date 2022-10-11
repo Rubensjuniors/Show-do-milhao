@@ -1,0 +1,155 @@
+.estrutura{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+
+}
+
+.contadores{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.questoes{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+#num-questao{
+  background-color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 42px -10px rgba(0, 0, 0, 0.5);
+}
+
+#num-dinheiro{
+  background-color: #ffffff;
+  width: 120px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 42px -10px rgba(0, 0, 0, 0.5);
+position: relative;
+}
+
+#num-dinheiro::before{
+  content: "";
+  display: block;
+  width: 3px;
+  height: 50px;
+  position: absolute;
+  left: -13px;
+  background-color: #ffffff;
+}
+
+#pergunta{
+  background-color: #ffffff;
+  width: 800px;
+  height: 150px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 42px -10px rgba(0, 0, 0, 0.8);
+}
+
+#alternativa{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.resposta{
+  background-color: #ffffff;
+  width: 500px;
+  height: 40px;
+  box-shadow: 0px 0px 42px -10px rgba(0, 0, 0, 0.3                            );
+  border-radius: 5px;
+}
+#a,#b,#c,#d{
+  position: relative;
+  cursor: pointer;
+}
+#a::before{
+content: "A.";
+position: absolute;
+left: -45px;
+font-size: 2rem;
+color: #ffff00;
+font-family: "Rubik";
+font-weight: 700;
+}
+#b::before{
+content: "B.";
+position: absolute;
+left: -45px;
+font-size: 2rem;
+color: #ffff00;
+font-family: "Rubik";
+font-weight: 700;
+}
+#c::before{
+content: "C.";
+position: absolute;
+left: -45px;
+font-size: 2rem;
+color: #ffff00;
+font-family: "Rubik";
+font-weight: 700;
+}
+#d::before{
+content: "D.";
+position: absolute;
+left: -45px;
+font-size: 2rem;
+color: #ffff00;
+font-family: "Rubik";
+font-weight: 700;
+}
+
+.encerrar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.encerrar a{
+  background-color: #ffff00;
+  width: 140px;
+  height: 40px;
+  border-radius: 5px;
+  
+}
+
+
+@media (max-height: 700px){
+  .questoes{
+    gap: 10px;
+  }
+  .estrutura{
+    gap: 40px;
+    position: relative;
+  }
+
+  #pergunta{
+    width: 700px;
+    height: 130px;
+  }
+
+  #alternativa{
+    gap: 25px;
+    
+  }
+
+
+  .encerrar{
+    position: absolute;
+    bottom: 0;
+    right: 70px;
+  }
+}
