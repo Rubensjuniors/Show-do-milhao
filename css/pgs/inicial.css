@@ -1,21 +1,31 @@
+.fundo{
+  background-image: url("https://www.showdomilhao.com.br/static/media/bg-blue-ligth.1a7e6adb.webp");
+  background-position: center;
+  background-size: cover;
+}
+
 .inicial{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
-  margin-top: 100px;
+  gap: 30px;
+  position: relative;
+  
 }
 
+.logo img{
+  width: 950px;
+}
 @media (min-height:700px){
   .inicial{
-    margin-top: 250px;
+    margin-top: 100px;
+  }
+  .logo img{
+    width: 1250px;
   }
 }
 
 
-.logo img{
-  width: 550px;
-}
 
 /* Efito dos botao */
 
@@ -30,7 +40,8 @@
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000000;
   transition: 0.5s ease;
-
+  position: absolute;
+  bottom: 50px;
 
 }
 @media (min-width:700px){

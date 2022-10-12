@@ -49,18 +49,15 @@ position: relative;
 #pergunta{
   background-color: #ffffff;
   width: 800px;
-  height: 150px;
+  height: 200px;
   border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0px 0px 42px -10px rgba(0, 0, 0, 0.8);
 }
 
 #alternativa{
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
   align-items: center;
 }
 .resposta{
@@ -111,11 +108,12 @@ font-family: "Rubik";
 font-weight: 700;
 }
 
+
+
 .encerrar{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
 }
 
 .encerrar a{
@@ -148,6 +146,8 @@ font-weight: 700;
 
 
   .encerrar{
+    flex-direction: column;
+    gap: 15px;
     position: absolute;
     bottom: 0;
     right: 70px;

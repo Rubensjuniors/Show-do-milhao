@@ -18,10 +18,12 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body class="img">
   <header>
     <div class="menu">
       <a href="/index.html"><img src="../img/icon-voltar.svg" alt="voltar"></a>
+       
+      <button id="pular" class="pular-btn font-texto zoom">Proxima pergunta</button>
     </div>
   </header>
   <main class="tela-principal">
@@ -33,22 +35,31 @@
           <span id="num-dinheiro" class="centro font-numeros"></span>
 
         </div>
-        <p id="pergunta" class="font-pergunta"></p>
+        <p id="pergunta" class="font-pergunta centro"></p>
       </div>
 
       <div class="corpo">
         <ul type="A" id="alternativa">
-          <li id="a" class="resposta centro font-alternativa zoom"></li>
-          <li id="b" class="resposta centro font-alternativa zoom"></li>
-          <li id="c" class="resposta centro font-alternativa zoom"></li>
-          <li id="d" class="resposta centro font-alternativa zoom"></li>
+          <li id="a" value="1A" class="resposta centro font-alternativa seleciona"></li>
+          <li id="b" value="1B" class="resposta centro font-alternativa seleciona"></li>
+          <li id="c" value="1C" class="resposta centro font-alternativa seleciona"></li>
+          <li id="d" value="1D" class="resposta centro font-alternativa seleciona"></li>
         </ul>
       </div>
 
+      
       <div class="encerrar">
-        <h4 class="font-texto">Encerrar com:</h4>
+        <div>
+        <h4 class="font-texto">Parar</h4>
         <a href="#" class="centro zoom font-numeros" id="encerrar-quantidade"></a>
       </div>
+        <div>
+        <h4 class="font-texto">Errar</h4>
+        <a href="#" class="centro font-numeros" id="errar"></a>
+      </div>
+      </div>
+     
+    
     </section>
 
   </main>

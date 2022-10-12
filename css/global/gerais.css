@@ -8,6 +8,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background: #0e2f6d;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -21,6 +22,12 @@ img {
 ul {
   list-style: none;
 }
+.img{
+  background-image: url("https://www.showdomilhao.com.br/static/media/BG_061.2ac1dd70.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .container {
   max-width: 1200px;
@@ -29,7 +36,8 @@ ul {
 
 .menu {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
+  align-items: center;
   padding: 20px;
 }
 .menu img {
@@ -61,6 +69,17 @@ ul {
   transition: 0.5s;
 }
 
+.seleciona{
+  border: 5px solid transparent;
+  transition: 0.3s;
+}
+
+.seleciona:hover{
+  border-color: #ffbb00;
+  transition: 0.3s;
+}
+
+
 .font-pergunta {
   font-family: "Nunito";
   font-weight: 400;
@@ -84,6 +103,8 @@ ul {
   font-weight: 400;
   font-size: 1.3rem;
   color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 @media (max-height: 700px) {
@@ -94,4 +115,20 @@ ul {
   .font-numeros {
     font-size: 1.175rem;
   }
+}
+
+
+.pular-btn{
+  color: #000;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 600;
+}
+.pular-btn:hover{
+background-color: #e5e5e5e5;
+transition: 0.5s;
 }
