@@ -77,7 +77,7 @@ ul {
 }
 
 .seleciona:hover{
-  border-color: #ffbb00;
+  border-color: #ffff00;
   transition: 0.3s;
 }
 
@@ -86,6 +86,8 @@ ul {
   font-family: "Nunito";
   font-weight: 400;
   font-size: 2rem;
+  padding: 10px;
+  text-align: center;
 }
 
 .font-alternativa {

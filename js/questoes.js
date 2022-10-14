@@ -11,38 +11,27 @@ let d = document.querySelector("#d");
 let divQuestoes = document.querySelector(".questoes");
 let alternativas = document.querySelector("#alternativa");
 
-let pular = document.querySelector("#pular");
+let pular = document.querySelectorAll("#pular");
 
 let encerrar = document.querySelector("#encerrar-quantidade");
 let errar = document.querySelector("#errar");
 
+let resposta = document.querySelectorAll(".resposta");
+
 
 // questoes
 const questoes = [
-  {
-    numQuestao: 0,
-    dinherio: 0,
-    pergunta: "Pergunta",
-    alternativa: {
-      A: "Alternativa A",
-      B: "Alternativa B",
-      C: "Alternativa C",
-      D: "Alternativa D",
-      correta: "alternativa certa",
-    },
-    encerrar: 0,
-    errar: 0,
-  },
+ 
   {
     numQuestao: 01,
     dinherio: 1000,
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    pergunta: "Que fruta é ressecada para se tornar uma ameixa seca?",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "Uva",
+      B: "Pêssego",
+      C: "Ameixa",
+      D: "Melão",
+      correta: "Ameixa",
     },
     encerrar: 500,
     errar: 0,
@@ -51,13 +40,13 @@ const questoes = [
   {
     numQuestao: 02,
     dinherio: 2000,
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    pergunta: "Qual bicho transmite Doença de Chagas?",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "Abelha",
+      B: "Barata",
+      C: "Pulga",
+      D: "Barbeiro",
+      correta: "Barbeiro",
     },
     encerrar: 1000,
     errar: 500,
@@ -66,13 +55,13 @@ const questoes = [
   {
     numQuestao: 03,
     dinherio: 3000,
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    pergunta: "Em que parte do corpo se encontra a epiglote?",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "Estômago",
+      B: "Pâncreas",
+      C: "Rim",
+      D: "Boca",
+      correta: "Boca",
     },
     encerrar: 2000,
     errar: 1000,
@@ -81,13 +70,13 @@ const questoes = [
   {
     numQuestao: 04,
     dinherio: 4000,
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    pergunta: "Um ano e composto por quantos trimestres???",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "2",
+      B: "4",
+      C: "6",
+      D: "8",
+      correta: "4",
     },
     encerrar: 3000,
     errar: 1500,
@@ -96,13 +85,13 @@ const questoes = [
   {
     numQuestao: 05,
     dinherio: 5000,
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    pergunta: "Que Profissional usa ferramenta chamada formão?",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "Carpinteiro",
+      B: "Relojoeiro",
+      C: "Confeiteiro",
+      D: "Bombeiro",
+      correta: "Carpinteiro",
     },
     encerrar:4000,
     errar: 2000,
@@ -111,28 +100,27 @@ const questoes = [
   {
     numQuestao: 06,
     dinherio: 10 + " " + "Mil",
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    pergunta: "Qual dos nomes abaixo nunca foi de um papa?",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "Valentim",
+      B: "Eugênio",
+      C: "Jorge",
+      D: "Vitor",
+      correta: "Jorge",
     },
     encerrar: 5000,
     errar: 2500,
   },
-
   {
     numQuestao: 07,
     dinherio: 20 + " " + "Mil",
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    pergunta: "Quem compôs o hino da independência?",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "Dom Pedro I",
+      B: "Manuel Bandeira",
+      C: "Castro Alvez",
+      D: "Carlos Gomes",
+      correta: "Dom Pedro I",
     },
     encerrar: 10 + " " + "Mil",
     errar: 5000,
@@ -141,13 +129,13 @@ const questoes = [
   {
     numQuestao: 08,
     dinherio: 30 + " " + "Mil",
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    pergunta: "Qual elemento da tabela periódica recebeu seu nome em homenagem a um gnomo subterrâneo “malvado”?",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "Háfnio",
+      B: "Cobalto",
+      C: "Berílio",
+      D: "Telúrio",
+      correta: "Berílio",
     },
     encerrar: 20 + " " + "Mil",
     errar: 10 + " " + "Mil",
@@ -164,20 +152,20 @@ const questoes = [
       D: "Argentina",
       correta: "Portugal",
     },
-    encerrar: 30 + " " + "MIl",
-    errar: 1 + " " + "Mil",
+    encerrar: 30 + " " + "Mil",
+    errar: 0 + " " + "Mil",
   },
 
   {
     numQuestao: 10,
     dinherio: 50 + " " + "Mil",
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    pergunta: "Quantos planetas Terra cabem dentro do sol? ",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "um milhão",
+      B: "cem",
+      C: "seiscentos",
+      D: "centro e cinquenta",
+      correta: "um milhão",
     },
     encerrar: 40 + " " + "MIl",
     errar: 20 + " " + "Mil",
@@ -186,13 +174,13 @@ const questoes = [
   {
     numQuestao: 11,
     dinherio: 100 + " " + "MIl",
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    pergunta: "Em que lugar vivem mais cangurus do que pessoas? ",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "indonésia",
+      B: "nova Zelândia",
+      C: "África do Sul",
+      D: "Austrália",
+      correta: "Austrália",
     },
     encerrar: 50 + " " + "Mil",
     errar: 25 + " " + "Mil",
@@ -201,13 +189,13 @@ const questoes = [
   {
     numQuestao: 12,
     dinherio: 200 + " " + "Mil",
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    pergunta: "O crime de emílio Eduardo da Rocha Devesa, o famoso 'Morre, diabo!!' foi:",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "Estrangular a vizinha",
+      B: "Esfaquear a própria mãe",
+      C: "Dar pauladas em um poodle",
+      D: "Jogar a irmã do viadulto",
+      correta: "Esfaquear a própria mãe",
     },
     encerrar: 100 + " " + "Mil",
     errar: 50 + " " + "Mil",
@@ -216,13 +204,13 @@ const questoes = [
   {
     numQuestao: 13,
     dinherio: 300 + " " + "MIl",
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    pergunta: "Quantos noves tem de 0 a 100?",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "10",
+      B: "11",
+      C: "20",
+      D: "21",
+      correta: "20",
     },
     encerrar: 200 + " " + "Mil",
     errar: 100 + " " + "Mil",
@@ -231,28 +219,28 @@ const questoes = [
   {
     numQuestao: 14,
     dinherio: 400 + " " + "Mil",
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    pergunta: "Quingentésimo corresponde a qual número?",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "5",
+      B: "50",
+      C: "5000",
+      D: "500",
+      correta: "500",
     },
     encerrar: 300 + " " + "Mil",
     errar: 150 + " " + "Mil",
   },
 
   {
-    numQuestao: 1,
+    numQuestao: 15,
     dinherio: 500 + " " + "Mil",
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    pergunta: "Quais são os planetas internos?",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "Céres e  Mercúrio",
+      B: "Mercúrio, Vênus, terra e Marte",
+      C: "Júpiter, Marte e Terra",
+      D: "As alternativas 'A' e 'B' estão corretas",
+      correta: "Mercúrio, Vênus, terra e Marte",
     },
     encerrar: 400 + " " + "Mil",
     errar: 200 + " " + "Mil",
@@ -260,14 +248,14 @@ const questoes = [
 
   {
     numQuestao: 16,
-    dinherio: 1 + " " + "Milhão",
-    pergunta: "Em que país nasceu Carmem Miranda?",
+    dinherio: 0 + " " + "Milhão",
+    pergunta: "Em que ano foi proclamada a República do Brasil e qual foi o primerio presidente?",
     alternativa: {
-      A: "Brasil",
-      B: "Espanha",
-      C: "Portugal",
-      D: "Argentina",
-      correta: "Portugal",
+      A: "1776, George Washington",
+      B: "1882, Dom Pedro I",
+      C: "1889, Marechal Deodoro da fonseca",
+      D: "1894, Prudente de Morais",
+      correta: "1889, Marechal Deodoro da fonseca",
     },
     encerrar: 500 + " " + "Mil",
     errar: 0,
@@ -280,24 +268,74 @@ const questoes = [
 
 
 
+  numQuestao.innerHTML = questoes[0].numQuestao;
+  numDinheiro.innerHTML = questoes[0].dinherio;
+  
+  pergunta.innerHTML = questoes[0].pergunta;
+  
+  a.innerHTML = questoes[0].alternativa.A;
+  b.innerHTML = questoes[0].alternativa.B;
+  c.innerHTML = questoes[0].alternativa.C;
+  d.innerHTML = questoes[0].alternativa.D;
 
-
-  numQuestao.innerHTML = questoes[1].numQuestao;
-  numDinheiro.innerHTML = questoes[1].dinherio;
-  
-  pergunta.innerHTML = questoes[1].pergunta;
-  
-  a.innerHTML = questoes[1].alternativa.A;
-  b.innerHTML = questoes[1].alternativa.B;
-  c.innerHTML = questoes[1].alternativa.C;
-  d.innerHTML = questoes[1].alternativa.D;
+  encerrar.innerHTML = questoes[0].encerrar;
+  errar.innerHTML = questoes[0].errar;
 
   
-  encerrar.innerHTML = questoes[1].encerrar;
-  errar.innerHTML = questoes[1].errar;
-  
-  const respostaCerta = questoes[1].alternativa.correta
  
+resposta.forEach(el => {
+    el.addEventListener('click',function () {
+
+      console.log(el.getAttribute('value'))
+
+      if(el){
+        el.style.backgroundColor = "#00FF00";
+      }else{
+        el.style.backgroundColor = "#FF0000";
+      }
+      
+    
+    });
+});
+
+
+pular.forEach(el => {
+  el.addEventListener('click',function () {
+  
+  console.log(el.getAttribute('value'))
+
+  numQuestao.innerHTML = questoes[3].numQuestao;
+  numDinheiro.innerHTML = questoes[3].dinherio;
+  
+  pergunta.innerHTML = questoes[3].pergunta;
+  
+  a.innerHTML = questoes[3].alternativa.A;
+  b.innerHTML = questoes[3].alternativa.B;
+  c.innerHTML = questoes[3].alternativa.C;
+  d.innerHTML = questoes[3].alternativa.D;
+
+  encerrar.innerHTML = questoes[3].encerrar;
+  errar.innerHTML = questoes[3].errar;
+  });
+})
+
+document.querySelectorAll(".parar").forEach(el => {
+  el.addEventListener('click',function () {
+  
+     console.log(el.getAttribute('value'))
+  });
+})
+
+
+
+// document.querySelectorAll().addEventListener('click', function(e){
+
+//   if(c = respostaCerta){
+//     c.style.backgroundColor = "#00FF00";
+//   }else{
+//     c.style.backgroundColor = "#FF0000";
+//   }
+// });
 
 
   
