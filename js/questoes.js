@@ -31,7 +31,7 @@ const questoes = [
       B: "Pêssego",
       C: "Ameixa",
       D: "Melão",
-      correta: "Ameixa",
+      correta: "Ameixa", 
     },
     encerrar: 500,
     errar: 0,
@@ -248,7 +248,7 @@ const questoes = [
 
   {
     numQuestao: 16,
-    dinherio: 0 + " " + "Milhão",
+    dinherio: 1 + " " + "Milhão",
     pergunta: "Em que ano foi proclamada a República do Brasil e qual foi o primerio presidente?",
     alternativa: {
       A: "1776, George Washington",
@@ -268,61 +268,69 @@ const questoes = [
 
 
 
-  numQuestao.innerHTML = questoes[0].numQuestao;
-  numDinheiro.innerHTML = questoes[0].dinherio;
-  
-  pergunta.innerHTML = questoes[0].pergunta;
-  
-  a.innerHTML = questoes[0].alternativa.A;
-  b.innerHTML = questoes[0].alternativa.B;
-  c.innerHTML = questoes[0].alternativa.C;
-  d.innerHTML = questoes[0].alternativa.D;
+function atribuirPerguntas(questoes, i){
+  if(i >= questoes.length){
+    i = 0
+  }
 
-  encerrar.innerHTML = questoes[0].encerrar;
-  errar.innerHTML = questoes[0].errar;
+  numQuestao.innerHTML = questoes[i].numQuestao;
+  numDinheiro.innerHTML = questoes[i].dinherio;
+  
+  pergunta.innerHTML = questoes[i].pergunta;
+  
+  a.innerHTML = questoes[i].alternativa.A;
+  b.innerHTML = questoes[i].alternativa.B;
+  c.innerHTML = questoes[i].alternativa.C;
+  d.innerHTML = questoes[i].alternativa.D;
+
+  encerrar.innerHTML = questoes[i].encerrar;
+  errar.innerHTML = questoes[i].errar;
 
   
- 
-resposta.forEach(el => {
-    el.addEventListener('click',function () {
+
+}
+
+function pegarPerguntas(i){
+  atribuirPerguntas(questoes, i)
+}
+
+
+pegarPerguntas(0)
+
+
+
+pular.forEach(el => {
+  el.addEventListener('click',function(){
+    console.log(el.getAttribute('value'))
+  })
+  
+  
+  
+})
+
+
+
+  resposta.forEach(el => {
+    el.addEventListener('click',function(){
 
       console.log(el.getAttribute('value'))
-
       if(el){
         el.style.backgroundColor = "#00FF00";
-      }else{
-        el.style.backgroundColor = "#FF0000";
-      }
-      
-    
+        }else{
+          el.style.backgroundColor = "#FF0000";
+        }
     });
 });
 
 
-pular.forEach(el => {
-  el.addEventListener('click',function () {
-  
-  console.log(el.getAttribute('value'))
 
-  numQuestao.innerHTML = questoes[3].numQuestao;
-  numDinheiro.innerHTML = questoes[3].dinherio;
-  
-  pergunta.innerHTML = questoes[3].pergunta;
-  
-  a.innerHTML = questoes[3].alternativa.A;
-  b.innerHTML = questoes[3].alternativa.B;
-  c.innerHTML = questoes[3].alternativa.C;
-  d.innerHTML = questoes[3].alternativa.D;
 
-  encerrar.innerHTML = questoes[3].encerrar;
-  errar.innerHTML = questoes[3].errar;
-  });
-})
 
 document.querySelectorAll(".parar").forEach(el => {
   el.addEventListener('click',function () {
   
      console.log(el.getAttribute('value'))
+ 
   });
 })
 
