@@ -1,3 +1,4 @@
+/* Tags gerais */
 * {
   margin: 0;
   padding: 0;
@@ -22,20 +23,24 @@ img {
 ul {
   list-style: none;
 }
-.img{
+
+/* fundo modalidades e perguntas */
+.fundo-peruntas{
   background-image: url("https://www.showdomilhao.com.br/static/media/BG_061.2ac1dd70.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center 0;
+  background-size: 2000px;
 
 }
 
-
-
+/* container de algns alementos */
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 10px;
 }
 
+/* menu das pg */
 .menu {
   display: flex;
   justify-content: space-between;
@@ -56,12 +61,14 @@ ul {
   }
 }
 
+/* centralizando os elementos */
 .centro {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Transição de zoom e selecionar dos botoes */
 .zoom {
   transition: 0.5s;
 }
@@ -82,6 +89,8 @@ ul {
 }
 
 
+
+/* fonts gerais */
 .font-pergunta {
   font-family: "Nunito";
   font-weight: 400;
@@ -111,17 +120,7 @@ ul {
   text-transform: uppercase;
 }
 
-@media (max-height: 700px) {
-  .font-pergunta {
-    font-size: 1.6rem;
-  }
-
-  .font-numeros {
-    font-size: 1.175rem;
-  }
-}
-
-
+/* hover do pular */
 .pular-btn{
   color: #000;
   height: 50px;
@@ -136,3 +135,16 @@ ul {
 background-color: #e5e5e5e5;
 transition: 0.5s;
 }
+
+
+@media (max-height: 700px) {
+  .font-pergunta {
+    font-size: 1.6rem;
+  }
+
+  .font-numeros {
+    font-size: 1.175rem;
+  }
+}
+
+
