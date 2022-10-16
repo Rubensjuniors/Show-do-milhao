@@ -7,7 +7,7 @@
   gap: 60px;
 }
 
-@media (min-height:700px){
+@media (min-height:900px){
   .modalidade{
     margin-top: 150px;
   }
