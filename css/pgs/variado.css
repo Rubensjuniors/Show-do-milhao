@@ -126,7 +126,8 @@ font-weight: 700;
 }
 
 
-@media (max-height: 700px){
+
+@media (max-height: 900px){
   .questoes{
     gap: 10px;
   }
@@ -150,7 +151,34 @@ font-weight: 700;
     flex-direction: column;
     gap: 15px;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     right: 70px;
+  }
+}
+
+@media (max-height: 600px), (max-width:1000px){
+  .encerrar{
+    flex-direction: row;
+    gap: 15px;
+    position: initial;
+   
+  }
+}
+
+@media (max-width:800px){
+  #pergunta{
+    width: 500px;
+  }
+  .resposta{
+    width: 350px;
+  }
+}
+
+@media(max-width:600px) {
+  #pergunta{
+    width: 300px;
+  }
+  .resposta{
+    width: 250px;
   }
 }
