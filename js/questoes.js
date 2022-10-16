@@ -295,7 +295,7 @@ function pegarPerguntas(i){
 }
 
 
-pegarPerguntas(0)
+pegarPerguntas(15)
 
 
 

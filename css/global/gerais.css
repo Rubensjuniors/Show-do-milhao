@@ -103,6 +103,7 @@ ul {
   font-family: "Nunito";
   font-weight: 400;
   font-size: 1.3rem;
+  text-align: center;
 }
 
 .font-numeros {
@@ -147,4 +148,12 @@ transition: 0.5s;
   }
 }
 
+@media (max-width:600px){
+.font-pergunta{
+  font-size: 1.5rem;
+}
+.font-alternativa{
+  font-size: 1.175rem;
+}
+}
 
