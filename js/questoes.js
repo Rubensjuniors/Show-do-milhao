@@ -13,11 +13,15 @@ let alternativas = document.querySelector("#alternativa");
 
 let pular = document.querySelectorAll("#pular");
 
-let encerrar = document.querySelector("#encerrar-quantidade");
+let encerrar = document.querySelector("#encerrar-quantidade");   
+let pararQtd = document.querySelector("#parar-qtd");   
 let errar = document.querySelector("#errar");
 
 let resposta = document.querySelectorAll(".resposta");
 
+
+let pgParar = document.querySelector('.parar-wrapp');
+let pgErro = document.querySelector('.erro-wrapp');
 
 // questoes
 const questoes = [
@@ -286,6 +290,7 @@ function atribuirPerguntas(questoes, i){
   encerrar.innerHTML = questoes[i].encerrar;
   errar.innerHTML = questoes[i].errar;
 
+  pararQtd.innerHTML = questoes[i].encerrar;
   
 
 }
@@ -295,18 +300,8 @@ function pegarPerguntas(i){
 }
 
 
-pegarPerguntas(15)
+pegarPerguntas(1)
 
-
-
-pular.forEach(el => {
-  el.addEventListener('click',function(){
-    console.log(el.getAttribute('value'))
-  })
-  
-  
-  
-})
 
 
 
@@ -314,14 +309,16 @@ pular.forEach(el => {
     el.addEventListener('click',function(){
 
       console.log(el.getAttribute('value'))
-      if(el){
+
+      if(el !== el){
         el.style.backgroundColor = "#00FF00";
+       
         }else{
           el.style.backgroundColor = "#FF0000";
+          pgErro.style.display = "block"
         }
     });
 });
-
 
 
 
@@ -330,6 +327,7 @@ document.querySelectorAll(".parar").forEach(el => {
   el.addEventListener('click',function () {
   
      console.log(el.getAttribute('value'))
+     pgParar.style.display = "block"
  
   });
 })
