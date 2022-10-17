@@ -17,9 +17,15 @@ margin: 0 auto;
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  margin-top: 50px;
+  margin-top: 90px;
   padding-top: 30px;
 
+}
+
+@media (min-height: 850px){
+.erro-elementos{
+  margin-top: 250px;
+}
 }
 
 .erro-titulo{
