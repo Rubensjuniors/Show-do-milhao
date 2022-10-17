@@ -123,6 +123,9 @@ ul {
 }
 
 /* hover do pular */
+#pular{
+  display: none;
+}
 .pular-btn{
   color: #000;
   height: 50px;

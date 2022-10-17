@@ -11,7 +11,7 @@ let d = document.querySelector("#d");
 let divQuestoes = document.querySelector(".questoes");
 let alternativas = document.querySelector("#alternativa");
 
-let pular = document.querySelectorAll("#pular");
+let pular = document.querySelector("#pular");
 
 let encerrar = document.querySelector("#encerrar-quantidade");   
 let pararQtd = document.querySelector("#parar-qtd");   
@@ -22,6 +22,7 @@ let resposta = document.querySelectorAll(".resposta");
 
 let pgParar = document.querySelector('.parar-wrapp');
 let pgErro = document.querySelector('.erro-wrapp');
+
 
 // questoes
 const questoes = [
@@ -277,21 +278,25 @@ function atribuirPerguntas(questoes, i){
     i = 0
   }
 
-  numQuestao.innerHTML = questoes[i].numQuestao;
-  numDinheiro.innerHTML = questoes[i].dinherio;
+  numQuestao.textContent = questoes[i].numQuestao;
+  numDinheiro.textContent = questoes[i].dinherio;
   
-  pergunta.innerHTML = questoes[i].pergunta;
+  pergunta.textContent = questoes[i].pergunta;
   
-  a.innerHTML = questoes[i].alternativa.A;
-  b.innerHTML = questoes[i].alternativa.B;
-  c.innerHTML = questoes[i].alternativa.C;
-  d.innerHTML = questoes[i].alternativa.D;
+  a.textContent = questoes[i].alternativa.A;
+  b.textContent = questoes[i].alternativa.B;
+  c.textContent = questoes[i].alternativa.C;
+  d.textContent = questoes[i].alternativa.D;
 
-  encerrar.innerHTML = questoes[i].encerrar;
-  errar.innerHTML = questoes[i].errar;
+  encerrar.textContent = questoes[i].encerrar;
+  errar.textContent = questoes[i].errar;
 
-  pararQtd.innerHTML = questoes[i].encerrar;
-  
+  pararQtd.textContent = questoes[i].encerrar;
+
+  let certa = document.querySelector('#correta')
+    certa.value = questoes[i].alternativa.correta
+    console.log(Boolean());
+    
 
 }
 
@@ -299,29 +304,35 @@ function pegarPerguntas(i){
   atribuirPerguntas(questoes, i)
 }
 
+pegarPerguntas(0)
 
-pegarPerguntas(1)
+resposta.forEach(el => {
+  el.addEventListener('click',function click(){
 
+    console.log(el.getAttribute('value'))
 
-
-
-  resposta.forEach(el => {
-    el.addEventListener('click',function(){
-
-      console.log(el.getAttribute('value'))
-
-      if(el !== el){
-        el.style.backgroundColor = "#00FF00";
-       
-        }else{
-          el.style.backgroundColor = "#FF0000";
-          pgErro.style.display = "block"
-        }
-    });
+    if(el == el){
+      el.style.backgroundColor = "#00FF00";
+      pular.style.display = "block"
+      
+      }else{
+        el.style.backgroundColor = "#FF0000";
+        pgErro.style.display = "block"
+      }
+  });
 });
 
+document.querySelectorAll("#pular").forEach(el => {
+  el.addEventListener('click',function() {
+  
+     console.log(el.getAttribute('value'))
+     for(let i=1; i<=16 ; i=i+1){
+      pegarPerguntas(1)+1
+     }
 
-
+ 
+  });
+})
 
 document.querySelectorAll(".parar").forEach(el => {
   el.addEventListener('click',function () {
@@ -331,20 +342,6 @@ document.querySelectorAll(".parar").forEach(el => {
  
   });
 })
-
-
-
-// document.querySelectorAll().addEventListener('click', function(e){
-
-//   if(c = respostaCerta){
-//     c.style.backgroundColor = "#00FF00";
-//   }else{
-//     c.style.backgroundColor = "#FF0000";
-//   }
-// });
-
-
-  
 
 
 
