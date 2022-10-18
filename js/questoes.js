@@ -22,6 +22,7 @@ let resposta = document.querySelectorAll(".resposta");
 
 let pgParar = document.querySelector('.parar-wrapp');
 let pgErro = document.querySelector('.erro-wrapp');
+let ganhou = document.querySelector('.ganhou-wrapp');
 
 
 // questoes
@@ -330,11 +331,14 @@ document.querySelectorAll("#pular").forEach(el => {
     })
 
     let indicePergunta = parseInt(alternativa.dataset.questao)
-    if(indicePergunta + 1 > 15){
-console.log('teste');
+    if(indicePergunta + 1 >= 16){
+      ganhou.style.display = "block"
     }else{
      pegarPerguntas(indicePergunta + 1)
+    
     }
+
+    el.style.display = "none"
   });
 })
 
