@@ -294,9 +294,7 @@ function atribuirPerguntas(questoes, i){
 
   pararQtd.textContent = questoes[i].encerrar;
 
-  let certa = document.querySelector('#correta')
-    certa.value = questoes[i].alternativa.correta
-    console.log(Boolean(c === certa));
+
     
 
 }
@@ -327,12 +325,16 @@ resposta.forEach(el => {
 document.querySelectorAll("#pular").forEach(el => {
   el.addEventListener('click',function() {
   
-     console.log(el.getAttribute('value'))
-     for(let i=1; i<=16 ; i=i+1){
-      pegarPerguntas(1)+1
-     }
+     resposta.forEach(el => {
+      el.removeAttribute("style")
+    })
 
- 
+    let indicePergunta = parseInt(alternativa.dataset.questao)
+    if(indicePergunta + 1 > 15){
+console.log('teste');
+    }else{
+     pegarPerguntas(indicePergunta + 1)
+    }
   });
 })
 
