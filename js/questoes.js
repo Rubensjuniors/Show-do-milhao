@@ -3,10 +3,10 @@ let numQuestao = document.querySelector("#num-questao");
 let numDinheiro = document.querySelector("#num-dinheiro");
 let pergunta = document.querySelector("#pergunta");
 
-let a = document.querySelector("#a");
-let b = document.querySelector("#b");
-let c = document.querySelector("#c");
-let d = document.querySelector("#d");
+let a = document.querySelector("#A");
+let b = document.querySelector("#B");
+let c = document.querySelector("#C");
+let d = document.querySelector("#D");
 
 let divQuestoes = document.querySelector(".questoes");
 let alternativas = document.querySelector("#alternativa");
@@ -278,6 +278,7 @@ function atribuirPerguntas(questoes, i){
     i = 0
   }
 
+  alternativas.dataset.questao =  i
   numQuestao.textContent = questoes[i].numQuestao;
   numDinheiro.textContent = questoes[i].dinherio;
   
@@ -295,7 +296,7 @@ function atribuirPerguntas(questoes, i){
 
   let certa = document.querySelector('#correta')
     certa.value = questoes[i].alternativa.correta
-    console.log(Boolean());
+    console.log(Boolean(c === certa));
     
 
 }
@@ -309,9 +310,10 @@ pegarPerguntas(0)
 resposta.forEach(el => {
   el.addEventListener('click',function click(){
 
-    console.log(el.getAttribute('value'))
+    let indicePergunta = alternativa.dataset.questao
+    let respostaSelecionada = el.getAttribute('id')
 
-    if(el == el){
+    if(questoes[indicePergunta].alternativa[respostaSelecionada] === questoes[indicePergunta].alternativa.correta){
       el.style.backgroundColor = "#00FF00";
       pular.style.display = "block"
       
