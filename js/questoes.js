@@ -13,21 +13,18 @@ let alternativas = document.querySelector("#alternativa");
 
 let pular = document.querySelector("#pular");
 
-let encerrar = document.querySelector("#encerrar-quantidade");   
-let pararQtd = document.querySelector("#parar-qtd");   
+let encerrar = document.querySelector("#encerrar-quantidade");
+let pararQtd = document.querySelector("#parar-qtd");
 let errar = document.querySelector("#errar");
 
 let resposta = document.querySelectorAll(".resposta");
 
-
-let pgParar = document.querySelector('.parar-wrapp');
-let pgErro = document.querySelector('.erro-wrapp');
-let ganhou = document.querySelector('.ganhou-wrapp');
-
+let pgParar = document.querySelector(".parar-wrapp");
+let pgErro = document.querySelector(".erro-wrapp");
+let ganhou = document.querySelector(".ganhou-wrapp");
 
 // questoes
 const questoes = [
- 
   {
     numQuestao: 01,
     dinherio: 1000,
@@ -37,7 +34,7 @@ const questoes = [
       B: "Pêssego",
       C: "Ameixa",
       D: "Melão",
-      correta: "Ameixa", 
+      correta: "Ameixa",
     },
     encerrar: 500,
     errar: 0,
@@ -99,7 +96,7 @@ const questoes = [
       D: "Bombeiro",
       correta: "Carpinteiro",
     },
-    encerrar:4000,
+    encerrar: 4000,
     errar: 2000,
   },
 
@@ -135,7 +132,8 @@ const questoes = [
   {
     numQuestao: 08,
     dinherio: 30 + " " + "Mil",
-    pergunta: "Qual elemento da tabela periódica recebeu seu nome em homenagem a um gnomo subterrâneo “malvado”?",
+    pergunta:
+      "Qual elemento da tabela periódica recebeu seu nome em homenagem a um gnomo subterrâneo “malvado”?",
     alternativa: {
       A: "Háfnio",
       B: "Cobalto",
@@ -195,7 +193,8 @@ const questoes = [
   {
     numQuestao: 12,
     dinherio: 200 + " " + "Mil",
-    pergunta: "O crime de emílio Eduardo da Rocha Devesa, o famoso 'Morre, diabo!!' foi:",
+    pergunta:
+      "O crime de emílio Eduardo da Rocha Devesa, o famoso 'Morre, diabo!!' foi:",
     alternativa: {
       A: "Estrangular a vizinha",
       B: "Esfaquear a própria mãe",
@@ -255,7 +254,8 @@ const questoes = [
   {
     numQuestao: 16,
     dinherio: 1 + " " + "Milhão",
-    pergunta: "Em que ano foi proclamada a República do Brasil e qual foi o primerio presidente?",
+    pergunta:
+      "Em que ano foi proclamada a República do Brasil e qual foi o primerio presidente?",
     alternativa: {
       A: "1776, George Washington",
       B: "1882, Dom Pedro I",
@@ -266,25 +266,19 @@ const questoes = [
     encerrar: 500 + " " + "Mil",
     errar: 0,
   },
-
-
-  
-  
 ];
 
-
-
-function atribuirPerguntas(questoes, i){
-  if(i >= questoes.length){
-    i = 0
+function atribuirPerguntas(questoes, i) {
+  if (i >= questoes.length) {
+    i = 0;
   }
 
-  alternativas.dataset.questao =  i
+  alternativas.dataset.questao = i;
   numQuestao.textContent = questoes[i].numQuestao;
   numDinheiro.textContent = questoes[i].dinherio;
-  
+
   pergunta.textContent = questoes[i].pergunta;
-  
+
   a.textContent = questoes[i].alternativa.A;
   b.textContent = questoes[i].alternativa.B;
   c.textContent = questoes[i].alternativa.C;
@@ -294,72 +288,63 @@ function atribuirPerguntas(questoes, i){
   errar.textContent = questoes[i].errar;
 
   pararQtd.textContent = questoes[i].encerrar;
-
-
-    
-
 }
 
-function pegarPerguntas(i){
-  atribuirPerguntas(questoes, i)
+function pegarPerguntas(i) {
+  atribuirPerguntas(questoes, i);
 }
 
-pegarPerguntas(0)
+pegarPerguntas(0);
 
-resposta.forEach(el => {
-  el.addEventListener('click',function click(){
 
-    let indicePergunta = alternativa.dataset.questao
-    let respostaSelecionada = el.getAttribute('id')
 
-    if(questoes[indicePergunta].alternativa[respostaSelecionada] === questoes[indicePergunta].alternativa.correta){
-      el.style.backgroundColor = "#00FF00";
-      pular.style.display = "block"
+resposta.forEach((el) => {
+  el.addEventListener("click", function click() {
+  
+
+    let indicePergunta = alternativa.dataset.questao;
+    let respostaSelecionada = el.getAttribute("id");
+
+    console.log(indicePergunta, respostaSelecionada);
+
+    let respostaEcolhida = questoes[indicePergunta].alternativa[respostaSelecionada];
+    let respostaCerta =  questoes[indicePergunta].alternativa.correta;
+
+    if (respostaEcolhida === respostaCerta) {
+      let indicePergunta = parseInt(alternativa.dataset.questao);
+      if (indicePergunta + 1 >= 16) {
+        ganhou.style.display = "block";
+      } else {
+        pegarPerguntas(indicePergunta + 1);
       
-      }else{
-        el.style.backgroundColor = "#FF0000";
-        pgErro.style.display = "block"
       }
+    } else {
+      el.style.backgroundColor = "#FF0000";
+      pgErro.style.display = "block";
+    }
   });
 });
 
-document.querySelectorAll("#pular").forEach(el => {
-  el.addEventListener('click',function() {
-  
-     resposta.forEach(el => {
-      el.removeAttribute("style")
-    })
+// document.querySelectorAll("#pular").forEach((el) => {
+//   el.addEventListener("click", function () {
+//     resposta.forEach((el) => {
+//       el.removeAttribute("style");
+//     });
 
-    let indicePergunta = parseInt(alternativa.dataset.questao)
-    if(indicePergunta + 1 >= 16){
-      ganhou.style.display = "block"
-    }else{
-     pegarPerguntas(indicePergunta + 1)
-    
-    }
+//     let indicePergunta = parseInt(alternativa.dataset.questao);
+//     if (indicePergunta + 1 >= 16) {
+//       ganhou.style.display = "block";
+//     } else {
+//       pegarPerguntas(indicePergunta + 1);
+//     }
 
-    el.style.display = "none"
+//     el.style.display = "none";
+//   });
+// });
+
+document.querySelectorAll(".parar").forEach((el) => {
+  el.addEventListener("click", function () {
+    console.log(el.getAttribute("value"));
+    pgParar.style.display = "block";
   });
-})
-
-document.querySelectorAll(".parar").forEach(el => {
-  el.addEventListener('click',function () {
-  
-     console.log(el.getAttribute('value'))
-     pgParar.style.display = "block"
- 
-  });
-})
-
-
-
-  
-
-
-
- 
-
-
-
-
-
+});
