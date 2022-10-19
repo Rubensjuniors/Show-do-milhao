@@ -89,6 +89,12 @@ ul {
   transition: 0.3s;
 }
 
+@media (max-width: 800px) {
+  .seleciona:hover{
+border-color:  transparent;
+  }
+}
+
 
 
 /* fonts gerais */
