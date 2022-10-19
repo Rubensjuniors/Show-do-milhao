@@ -68,11 +68,11 @@ position: relative;
   box-shadow: 0px 0px 42px -10px rgba(0, 0, 0, 0.3                            );
   border-radius: 5px;
 }
-#a,#b,#c,#d{
+#A,#B,#C,#D{
   position: relative;
   cursor: pointer;
 }
-#a::before{
+#A::before{
 content: "A.";
 position: absolute;
 left: -45px;
@@ -81,7 +81,7 @@ color: #ffff00;
 font-family: "Rubik";
 font-weight: 700;
 }
-#b::before{
+#B::before{
 content: "B.";
 position: absolute;
 left: -45px;
@@ -90,7 +90,7 @@ color: #ffff00;
 font-family: "Rubik";
 font-weight: 700;
 }
-#c::before{
+#C::before{
 content: "C.";
 position: absolute;
 left: -45px;
@@ -99,7 +99,7 @@ color: #ffff00;
 font-family: "Rubik";
 font-weight: 700;
 }
-#d::before{
+#D::before{
 content: "D.";
 position: absolute;
 left: -45px;
