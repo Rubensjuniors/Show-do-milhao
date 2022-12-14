@@ -1,4 +1,4 @@
-//seleção dos id e class
+//seleção dos elementos
 let numQuestao = document.querySelector("#num-questao");
 let numDinheiro = document.querySelector("#num-dinheiro");
 let pergunta = document.querySelector("#pergunta");
@@ -23,7 +23,7 @@ let pgParar = document.querySelector(".parar-wrapp");
 let pgErro = document.querySelector(".erro-wrapp");
 let ganhou = document.querySelector(".ganhou-wrapp");
 
-// questoes
+// Array de questoes
 const questoes = [
   {
     numQuestao: 01,
@@ -268,6 +268,7 @@ const questoes = [
   },
 ];
 
+// atribuição das perguntas
 function atribuirPerguntas(questoes, i) {
   if (i >= questoes.length) {
     i = 0;
@@ -298,12 +299,12 @@ pegarPerguntas(0);
 
 
 
-resposta.forEach((el) => {
-  el.addEventListener("click", function click() {
+resposta.forEach((itemResposta) => {
+  itemResposta.addEventListener("click", () => {
   
 
     let indicePergunta = alternativa.dataset.questao;
-    let respostaSelecionada = el.getAttribute("id");
+    let respostaSelecionada = itemResposta.getAttribute("id");
 
     console.log(indicePergunta, respostaSelecionada);
 
@@ -319,32 +320,16 @@ resposta.forEach((el) => {
       
       }
     } else {
-      el.style.backgroundColor = "#FF0000";
+      itemResposta.style.backgroundColor = "#FF0000";
       pgErro.style.display = "block";
     }
   });
 });
 
-// document.querySelectorAll("#pular").forEach((el) => {
-//   el.addEventListener("click", function () {
-//     resposta.forEach((el) => {
-//       el.removeAttribute("style");
-//     });
-
-//     let indicePergunta = parseInt(alternativa.dataset.questao);
-//     if (indicePergunta + 1 >= 16) {
-//       ganhou.style.display = "block";
-//     } else {
-//       pegarPerguntas(indicePergunta + 1);
-//     }
-
-//     el.style.display = "none";
-//   });
-// });
-
-document.querySelectorAll(".parar").forEach((el) => {
-  el.addEventListener("click", function () {
-    console.log(el.getAttribute("value"));
+const parar = document.querySelectorAll(".parar");
+parar.forEach((itemParar) => {
+  itemParar.addEventListener("click", () => {
+    console.log(itemParar.getAttribute("value"));
     pgParar.style.display = "block";
   });
 });
