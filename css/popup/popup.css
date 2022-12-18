@@ -1,0 +1,30 @@
+
+.popup-titulo{
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Righteous";
+}
+
+.popup-gif img{
+  width: 240px;
+}
+
+@media(max-width:750px){
+  .popup-titulo{
+    font-size: 1.5rem;
+  }
+
+  .popup-gif img{
+    width: 200px;
+  }
+}
+
+@media (max-width:550px){
+  .popup-titulo{
+    font-size: 1rem;
+  }
+
+  .popup-gif img{
+    width: 150px;
+  }
+}

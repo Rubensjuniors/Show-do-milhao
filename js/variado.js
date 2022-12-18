@@ -11,7 +11,13 @@ const d = document.querySelector("#D");
 
 const alternativaResposta = document.querySelectorAll(".alternativa-resposta")
 
-let desistir = document.querySelector("#desistir");
+const desistir = document.querySelector("#desistir"); // button de desistir
+const desistiuDinheiro= document.querySelector(".desistiu-dinheiro"); // quantidade de dinheiro que desistiu
+
+const erro = document.querySelector("#erro"); 
+const popupDesistir = document.querySelector("#popup-desistir"); // ativação do popup desistir
+const popupGanhou = document.querySelector("#ganhou")
+
 
 // array dos numeros e dinheiro
 const numeros =[
@@ -110,17 +116,31 @@ const perguntas = [
     D: "Telúrio",
     certa: "Berílio",
   },
+  },
+  {
+    pergunta:
+    "O crime de emílio Eduardo da Rocha Devesa, o famoso 'Morre, diabo!!' foi:",
+  alternativa: {
+    A: "Estrangular a vizinha",
+    B: "Esfaquear a própria mãe",
+    C: "Dar pauladas em um poodle",
+    D: "Jogar a irmã do viadulto",
+    certa: "Esfaquear a própria mãe",
+  },
   }
 ]
 
 // atribuindo as pesguntas e numeros
 function atribuirPerguntas(perguntas, numeros, i){
   if(i >= perguntas.length && numeros.length){
+    
     i = 0;
   }
+  
   alternativas.dataset.perguntas = i;
   numeroPergunta.textContent = numeros[i].perguntaNumero
   dinherio.textContent = numeros[i].dinherio
+  desistiuDinheiro.textContent = numeros[i].dinherio
 
   pergunta.textContent = perguntas[i].pergunta;
 
@@ -154,15 +174,27 @@ alternativaResposta.forEach((resposta)=>{
 
       if(respostaEscolhida === respostaCerta){
         const indicePergunta = parseInt(alternativa.dataset.perguntas);
-        if (indicePergunta + 1 >= 18) {
-          ganhou.style.display = "block";
+        if (indicePergunta + 1 >= 4) {
+          ganhou.style.display = "grid";
         } else {
           pegarPerguntas(indicePergunta + 1);
         
         }
-      } 
+      } else{
+       resposta.classList.add("erro");
+       erro.style.display = "grid";
+      }
       });
     });
+
+    
+    
+    // função de desistir
+    desistir.addEventListener("click", ()=>{
+      popupDesistir.style.display = "grid";
+    });
+
+
 
 
     

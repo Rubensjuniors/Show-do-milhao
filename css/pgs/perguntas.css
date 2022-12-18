@@ -132,6 +132,10 @@
   font-weight: 700;
 }
 
+.erro{
+  background-color: #ff0000;
+}
+
 @media(max-width:1050px){
   #pergunta{
     width: 600px;

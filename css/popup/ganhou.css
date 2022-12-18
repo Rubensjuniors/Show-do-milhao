@@ -1,59 +1,45 @@
-.ganhou-wrapp{
-  display: none;
+.popup-ganhou{
+  background: url('../../img/gif/fundo-ganhou.gif.crdownload') ;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100vh;
+  
+  position: fixed;
+  top: 0;
+  right: 0;
 
+  display: grid;
+  align-content: center;
+  justify-items: center;
 }
 
-.ganhou-container{
-  margin: 0 auto;
-  background-color: #FFFFFF;
+.popup-ganhou div{
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  background-color: #ffffff;
   width: 500px;
-  height: 420px;
+  height: 500px;
   border-radius: 10px;
 }
 
 
-.ganhou-elementos{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
-  margin-top: 90px;
-  padding: 30px 10px 0px 
-  10px;
-
-
+.popup-ganhou{
+  display: none;
 }
 
-.ganhou-elementos h1{
-  font-size: 2.3rem;
-  font-family: "Rubik";
-}
-
-
-
-@media (min-height: 850px){
-.ganhou-elementos{
-  margin-top: 250px;
-}
-}
-
-.ganhou-titulo{
-  font-family: "Righteous";
-  font-size: 2rem;
-  color: #000;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-
-
-@media (max-width:800px) {
-  .ganhou-container{
-    width: 300px;
+@media(max-width:750px){
+  #popup-ganhou div{
+    width: 400px;
+    height: 400px;
   }
-.ganhou-titulo{
-  font-size: 1.5rem;
+
+
 }
 
+@media (max-width:550px){
+  #popup-ganhou div{
+    width: 300px;
+    height: 300px;
+  }
 }
