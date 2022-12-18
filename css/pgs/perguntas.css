@@ -92,6 +92,11 @@
   position: relative;
   transition: 0.3s;
 }
+.alternativa-resposta:hover{
+  box-shadow: 0px 0px 42px -10px rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+  transform: scale(1.1);
+}
 
 #A::before,#B::before,#C::before,#D::before{
   position: absolute;
@@ -163,6 +168,9 @@
     left: -30px;
     font-size: 1.7rem;
   }
+  .alternativa-resposta:hover{
+    transform: scale(1);
+  }
 }
 @media(max-width:550px){
   #pergunta{
@@ -170,5 +178,14 @@
   }
   .alternativa-resposta{
     width: 200px;
+  }
+}
+
+@media (max-width: 350px){
+  #pergunta{
+    width: 150px;
+  }
+  .alternativa-resposta{
+    width: 100px;
   }
 }
