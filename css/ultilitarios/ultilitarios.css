@@ -33,6 +33,9 @@ text-align: center;
 #modalidades .botao p{
 padding: 10px 90px;
 }
+#modalidades .botao:hover:last-child{
+  transform: scale(1);
+}
 
 @media (max-width:600px) {
   #modalidades .botao{
