@@ -2,15 +2,12 @@
 * {
   margin: 0;
   padding: 0;
+
 }
 
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background: #0e2f6d;
-  -webkit-font-smoothing: antialiased;
-
 }
 
 a {
@@ -25,14 +22,10 @@ ul {
   list-style: none;
 }
 
-/* fundo modalidades e perguntas */
-.fundo-peruntas{
-  background-image: url("https://www.showdomilhao.com.br/static/media/BG_061.2ac1dd70.png");
-  background-repeat: no-repeat;
-  background-position: center -150px ;
-  background-size: 2500px;
-
+button{
+  border: none;
 }
+
 
 /* container  */
 .container {
@@ -41,123 +34,4 @@ ul {
   padding: 0px 20px 20px 20px;
 }
 
-/* menu das pg */
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-.menu img {
-  transition: 0.5s;
-}
-.menu img:hover {
-  transform: scale(1.1);
-  transition: 0.5s;
-}
-
-@media (max-height: 700px) {
-  .menu {
-    padding: 10px 20px;
-  }
-}
-
-/* centralizando os elementos */
-.centro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Transição de zoom e selecionar dos botoes */
-.zoom {
-  transition: 0.5s;
-}
-
-.zoom:hover {
-  transform: scale(1.05);
-  transition: 0.5s;
-}
-
-.seleciona{
-  border: 5px solid transparent;
-  transition: 0.3s;
-}
-
-.seleciona:hover{
-  border-color: #ffff00;
-  transition: 0.3s;
-}
-
-@media (max-width: 800px) {
-  .seleciona:hover{
-border-color:  transparent;
-  }
-}
-
-
-
-/* fonts gerais */
-.font-pergunta {
-  font-family: "Nunito";
-  font-weight: 400;
-  font-size: 2rem;
-  padding: 10px;
-  text-align: center;
-}
-
-.font-alternativa {
-  font-family: "Nunito";
-  font-weight: 400;
-  font-size: 1.3rem;
-  text-align: center;
-}
-
-.font-numeros {
-  font-family: "Rubik";
-  font-weight: 700;
-  font-size: 1.3rem;
-}
-
-.font-texto {
-  font-family: "Nunito";
-  font-weight: 400;
-  font-size: 1.3rem;
-  color: #ffffff;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-/* hover do pular */
-#pular{
-  display: none;
-}
-.pular-btn{
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  transition: 0.5s;
-  background-color: transparent;
-}
-
-
-@media (max-height: 700px) {
-  .font-pergunta {
-    font-size: 1.6rem;
-  }
-
-  .font-numeros {
-    font-size: 1.175rem;
-  }
-}
-
-@media (max-width:600px){
-.font-pergunta{
-  font-size: 1.5rem;
-  padding: 15px;
-}
-.font-alternativa{
-  font-size: 1.175rem;
-}
-}
 

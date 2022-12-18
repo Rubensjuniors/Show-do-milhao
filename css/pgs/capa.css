@@ -1,0 +1,13 @@
+
+.inicial{
+  background: linear-gradient( 65deg,  #0e2f6d , #063ca0 );
+display: grid;
+align-content: center;
+justify-items: center;
+width: 100%;
+height: 100vh;
+
+}
+
+
+

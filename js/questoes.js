@@ -1,6 +1,6 @@
 //seleção dos elementos
-let numQuestao = document.querySelector("#num-questao");
-let numDinheiro = document.querySelector("#num-dinheiro");
+let numQuestao = document.querySelector("#numero-pergunta");
+let numDinheiro = document.querySelector("#dinheiro");
 let pergunta = document.querySelector("#pergunta");
 
 let a = document.querySelector("#A");
@@ -15,13 +15,13 @@ let pular = document.querySelector("#pular");
 
 let encerrar = document.querySelector("#encerrar-quantidade");
 let pararQtd = document.querySelector("#parar-qtd");
-let errar = document.querySelector("#errar");
+let errar = document.querySelector("#desistir");
 
-let resposta = document.querySelectorAll(".resposta");
+let resposta = document.querySelectorAll(".alternativa-resposta");
 
-let pgParar = document.querySelector(".parar-wrapp");
-let pgErro = document.querySelector(".erro-wrapp");
-let ganhou = document.querySelector(".ganhou-wrapp");
+// let pgParar = document.querySelector(".parar-wrapp");
+// let pgErro = document.querySelector(".erro-wrapp");
+// let ganhou = document.querySelector(".ganhou-wrapp");
 
 // Array de questoes
 const questoes = [
@@ -273,7 +273,7 @@ function atribuirPerguntas(questoes, i) {
   if (i >= questoes.length) {
     i = 0;
   }
-
+  
   alternativas.dataset.questao = i;
   numQuestao.textContent = questoes[i].numQuestao;
   numDinheiro.textContent = questoes[i].dinherio;
@@ -285,10 +285,11 @@ function atribuirPerguntas(questoes, i) {
   c.textContent = questoes[i].alternativa.C;
   d.textContent = questoes[i].alternativa.D;
 
-  encerrar.textContent = questoes[i].encerrar;
-  errar.textContent = questoes[i].errar;
+  // encerrar.textContent = questoes[i].encerrar;
+  // errar.textContent = questoes[i].errar;
 
-  pararQtd.textContent = questoes[i].encerrar;
+  // pararQtd.textContent = questoes[i].encerrar;
+
 }
 
 function pegarPerguntas(i) {
@@ -296,6 +297,7 @@ function pegarPerguntas(i) {
 }
 
 pegarPerguntas(0);
+
 
 
 

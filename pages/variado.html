@@ -18,91 +18,38 @@
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body class="fundo-peruntas">
-  <header>
-    <div class="menu">
-      <a href="../index.html"><img src="../img/icon-voltar.svg" alt="voltar"></a>
-       
-      <button id="pular" value="Proximo" class="pular-btn font-texto zoom">Proxima pergunta</button>
-    </div>
-  </header>
-  <main class="tela-principal">
+<body id="variado">
 
-    <section class="estrutura container">
-      <div class="questoes">
-        <div class="contadores">
-          <span id="num-questao" class="centro font-numeros"></span>
-          <span id="num-dinheiro" class="centro font-numeros"></span>
-          
-        </div>
-        <p id="pergunta" class="font-pergunta centro"></p>
-      </div>
+  <main>
+    <article class="questoes container">
+      <section class="pergunta-container">
+      <header data-contador="">
+        <span id="numero-pergunta">?</span>
+        <span id="dinheiro">?</span>
+      </header>
 
-      <div class="corpo">
-        <ul type="A" id="alternativa" data-questao="">
-          <li id="A"  class="resposta centro font-alternativa seleciona"></li>
-          <li id="B"  class="resposta centro font-alternativa seleciona"></li>
-          <li id="C"  class="resposta centro font-alternativa seleciona"></li>
-          <li id="D"  class="resposta centro font-alternativa seleciona"></li>
-        </ul>
-      </div>
+      <div id="pergunta">Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse, ab voluptatum architecto perspiciatis odio consectetur quae nostrum accusantium enim officia pariatur natus! Voluptatum, doloremque suscipit et facere pariatur debitis! ?</div>
+    </section>
+
+      <ul id="alternativa" data-alternativa="">
+        <li id="A" class="alternativa-resposta">?</li>
+        <li id="B" class="alternativa-resposta">?</li>
+        <li id="C" class="alternativa-resposta">?</li>
+        <li id="D" class="alternativa-resposta">?</li>
+      </ul>
 
       
-      <div class="encerrar">
-        <div>
-        <h4 class="font-texto">Parar</h4>
-        <a href="#" value="parar" class="centro parar zoom font-numeros" id="encerrar-quantidade"></a>
-      </div>
-        <div>
-        <h4 class="font-texto">Errar</h4>
-        <a href="#" class="centro font-numeros" id="errar"></a>
-      </div>
-      <!-- <button id="pular" value="Proximo" class="pular-btn font-texto zoom">Next</button> -->
-      </div>
-     
-    
-    </section>
+        <button id="desistir" class="botao"> Desistir</button>
+      
 
-    <!-- po pup -->
-    <section class="parar-wrapp wrapp-popup">
-      <div class="parar-container">
-        <div class="parar-elementos">
-        <h1 class="parar-titulo">Você parou com</h1>
-        <p  class="centro parar zoom font-numeros" id="parar-qtd">?</p>
-        <a href="../pages/modalidades.html" class="recomecar zoom">Voltar</a>
-      </div>
-      </div>
-    </section>
 
-    <section class="erro-wrapp wrapp-popup">
-      <div class="erro-container">
-        <div class="erro-elementos">
-        <h1 class="erro-titulo">Serio que você Errou!!!!</h1>
-        <img src="../img/fotos/foto-erro.jpeg" alt="" width="250px">
-        <a href="../pages/modalidades.html" class="recomecar zoom">Recomeçar</a>
-      </div>
-      </div>
-
-    </section>
-
-    <section class="ganhou-wrapp wrapp-popup">
-      <div class="ganhou-container">
-        <div class="ganhou-elementos">
-          <h1>Você Ganhou!!!!!</h1>
-  
-          <img src="../img/fotos/um-milhao-milhao.gif" alt=""  width="300">
-
-          <a href="../index.html" class="recomecar zoom">Voltar</a>
-        </div>
-      </div>
-    </section>
-  
+    </article>
 
   </main>
-
- <input type="hidden" value="" id="correta">
+   
   <!-- JS externo -->
-  <script src="../js/questoes.js"></script>
+  <!-- <script src="../js/questoes.js"></script> -->
+  <script src="../js/variado.js"></script>
 
 </body>
 

@@ -1,8 +1,9 @@
 @import url("../css/global/gerais.css");
 
-@import url("../css/pgs/inicial.css");
+@import url("../css/pgs/capa.css");
 @import url("../css/pgs/modalidades.css");
-@import url("../css/pgs/variado.css");
+@import url("../css/pgs/perguntas.css");
+@import url("../css/ultilitarios/ultilitarios.css");
 
 @import url("../css/popup/parar.css");
 @import url("../css/popup/erro.css");
