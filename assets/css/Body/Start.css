@@ -1,0 +1,17 @@
+.start{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.start__logo{
+  width: 350px;
+}
+.start__button{
+letter-spacing: 5px;
+}
+
+@media (min-width: 700px) {
+  .start__logo{
+    width: 450px;
+  }
+}

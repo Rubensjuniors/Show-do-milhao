@@ -1,0 +1,29 @@
+:root {
+  --color-button: #f4c60e;
+  --color-button-hover: #e5b60b;
+  --shadow-soft:0px 0px 16px 10px rgba(0 0 0 0.6);
+}
+
+:root{
+  --font-nunito: "Nunito";
+
+  --size-small: 1.5rem;
+  --size-medium: 2rem;
+  --size-large: 3rem;
+}
+
+.button-general {
+  background: var(--color-button);
+  font-family: var(--font-nunito);
+  font-size: var(--size-small);
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 0.8rem 4rem;
+  cursor: pointer;
+  /* box-shadow: var(--shadow-soft); */
+}
+
+.button-general:hover{
+  background:var(--color-button-hover);
+}
