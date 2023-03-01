@@ -23,9 +23,10 @@ ul{
   list-style: none;
 }
 button{
-  border: none;
+  border: none ;
+  background: none ;
 }
 
 .none{
-  display: none;
+  display: none !important;
 }

@@ -1,4 +1,6 @@
 :root {
+  --color-white: #ffffff;
+  --color-black: #000;
   --color-button: #f4c60e;
   --color-button-hover: #e5b60b;
   --shadow-soft:0px 0px 16px 10px rgba(0 0 0 0.6);
@@ -6,6 +8,7 @@
 
 :root{
   --font-nunito: "Nunito";
+  --font-Righteous: "Righteous";
 
   --size-small: 1.5rem;
   --size-medium: 2rem;
@@ -21,7 +24,7 @@
   border-radius: 50px;
   padding: 0.8rem 4rem;
   cursor: pointer;
-  /* box-shadow: var(--shadow-soft); */
+  box-shadow: var(--shadow-soft);
 }
 
 .button-general:hover{

@@ -2,3 +2,5 @@
 @import "./General/Utilities.css";
 
 @import "./Body/Start.css";
+@import "./Body/Options.css";
+@import "./Body/Questions.css";

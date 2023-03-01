@@ -1,0 +1,44 @@
+.options{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 20px;
+}
+
+.options__title{
+  font-family: var(--font-nunito);
+  font-size: var(--size-medium);
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.options__choose{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.options__choose-button{
+  width: 300px !important;
+}
+.off{
+  background: #c7c7c7;
+}.off:hover{
+  background: #c7c7c7 !important;
+}
+
+@media (min-width: 700px) {
+  .options__title{
+    font-size: var(--size-large);
+  }
+  .options__choose{
+    gap: 1.5rem;
+  }
+  .options__choose-button{
+    width: 400px !important;
+  }
+}
