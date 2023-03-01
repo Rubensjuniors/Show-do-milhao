@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2rem;
+  padding-bottom: 2rem;
 
 }
 .questions__wrap {
@@ -15,6 +16,16 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 10px;
+  
+}
+.questions__counter-number{
+  border: 2px solid white;
+  border-radius: 50%;
+  font-family: var(--font-nunito);
+  color: var(--color-white);
+  font-size: var(--size-small);
+  padding: 10px;
 }
 .counters__wrap {
   display: flex;
@@ -22,35 +33,82 @@
   gap: 1rem;
   font-family: var(--font-nunito);
   color: var(--color-white);
+  font-size: var(--size-small);
   padding: 10px 20px;
+  position: relative;
+  
 }
-
+.counter__points::before{
+  content: '';
+  display: block;
+  width: 2px;
+  height: 35px;
+  background: #ffffff;
+  position: absolute;
+  right:42px;
+}
 .questions__board {
+  max-width: 600px;
   text-align: center;
   font-family: var(--font-nunito);
   font-size: 1.3rem;
   color: var(--color-white);
   padding: 1rem;
+  padding-bottom: 2rem;
+
+  
 
 }
 .questions__response-wrap {
 display: flex;
 flex-direction: column;
-/* gap: 2rem; */
+gap: 1rem;
+
 }
 .response__options{
-  padding: 1.5rem 0;
+  padding: 1.5rem ;
   font-family: var(--font-nunito);
   font-size: 1.3rem;
   color: var(--color-white);
+  box-shadow: var(--shadow-soft);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .3s;    
 }
-.response__options div{
-  max-width: 350px;
+
+
+.response__options > div{
+  max-width: 550px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 1rem;
+ 
+  
 }
-.teste{
-
+.response__options--alternative{
+  font-family: var(--font-Righteous);
+  font-size: 2rem;
+  color: var(--color-button);
+}
+.alternative__text{
+  flex: 1;
+}
+.alternative__text p{
   word-break: break-all;
+}
+
+@media (min-width: 700px) {
+  .questions {
+    max-width: 1200px;
+    flex-direction: row;
+    align-items: start;
+    padding: 3rem;
+    gap: 5rem;
+  }
+  .response__options:hover{
+    transform: scale(1.02);
+    transition: .3s;
+    border-color: rgba(0, 0, 0, 0.3) !important;
+  }
 }

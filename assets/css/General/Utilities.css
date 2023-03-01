@@ -3,7 +3,7 @@
   --color-black: #000;
   --color-button: #f4c60e;
   --color-button-hover: #e5b60b;
-  --shadow-soft:0px 0px 16px 10px rgba(0 0 0 0.6);
+  --shadow-soft:0px 0px 16px 10px rgba(0, 0, 0, 0.1);
 }
 
 :root{
