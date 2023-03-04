@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 120px;
 }
 .start__logo{
   width: 350px;

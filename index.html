@@ -18,24 +18,24 @@
 
   <section data-visible="" class="start ">
     <figure>
-      <img class="start__logo" src="./img/logo-teste.png" alt="Logo Show do Milhão">
+      <img class="start__logo" src="./assets/img/logo.png" alt="Logo Show do Milhão">
     </figure>
-    <button class="start__button button-general start__button--js">Start</button>
+    <button data-button="start" class="start__button button-general">Start</button>
   </section>
 
 
-  <section data-visible="" class="options hiden">
+  <section data-visible="" class="options options--js hiden">
     <h1 class="options__title">Escolha um tema</h1>
 
     <ul class="options__choose ">
-      <li><button data-options="variado" class="options__choose-button button-general choose__button--js">Variado</button></li>
-      <li><button data-options="portugues" class="options__choose-button button-general off choose__button--js">Portugues</button></li>
-      <li><button data-options="matematica" class="options__choose-button button-general off choose__button--js">Matematica</button></li>
+      <li><button data-button="variado" class="options__choose-button button-general choose__button--js">Variado</button></li>
+      <li><button data-button="portugues" class="options__choose-button button-general off choose__button--js">Portugues</button></li>
+      <li><button data-button="matematica" class="options__choose-button button-general off choose__button--js">Matematica</button></li>
     </ul>
   </section>
 
 
-  <section data-visible="" class="questions hiden">
+  <section data-visible="" class="questions questions--js hiden ">
     <div class="questions__wrap">
       <header class="questions__counters">
         <div class="questions__counter-number ">01</div>
@@ -53,7 +53,7 @@
         <div>
           <span class="response__options--alternative">A.</span>
           <div class="alternative__text">
-            <p data-questions="a">?</p>
+            <p data-questions="alternative-a">?</p>
           </div>
         </div>
       </button>
@@ -61,7 +61,7 @@
         <div>
           <span class="response__options--alternative">B.</span>
           <div class="alternative__text">
-            <p data-questions="b">?</p>
+            <p data-questions="alternative-b">?</p>
           </div>
         </div>
       </button>
@@ -69,7 +69,7 @@
         <div>
           <span class="response__options--alternative">C.</span>
           <div class="alternative__text">
-            <p data-questions="c">?</p>
+            <p data-questions="alternative-c">?</p>
           </div>
         </div>
       </button>
@@ -77,13 +77,15 @@
         <div>
           <span class="response__options--alternative">D.</span>
           <div class="alternative__text">
-            <p data-questions="d">?</p>
+            <p data-questions="alternative-d">?</p>
           </div>
         </div>
       </button>
 
-
+      <button class="questions__desistir button-general">Desistir</button>
     </div>
+
+   
 
   </section>
 
