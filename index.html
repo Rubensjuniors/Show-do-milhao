@@ -16,35 +16,35 @@
 
 <body id="body">
 
-  <section class="start ">
+  <section data-visible="" class="start ">
     <figure>
       <img class="start__logo" src="./img/logo-teste.png" alt="Logo Show do Milhão">
     </figure>
-    <button class="start__button button-general">Start</button>
+    <button class="start__button button-general start__button--js">Start</button>
   </section>
 
-  <section class="options ">
+
+  <section data-visible="" class="options hiden">
     <h1 class="options__title">Escolha um tema</h1>
 
     <ul class="options__choose ">
-      <li><button data-options="variado" class="options__choose-button button-general">Variado</button></li>
-      <li><button data-options="portugues" class="options__choose-button button-general">Portugues</button></li>
-      <li><button data-options="matematica" class="options__choose-button button-general">Matematica</button></li>
+      <li><button data-options="variado" class="options__choose-button button-general choose__button--js">Variado</button></li>
+      <li><button data-options="portugues" class="options__choose-button button-general off choose__button--js">Portugues</button></li>
+      <li><button data-options="matematica" class="options__choose-button button-general off choose__button--js">Matematica</button></li>
     </ul>
-
   </section>
 
-  <section class="questions ">
+
+  <section data-visible="" class="questions hiden">
     <div class="questions__wrap">
       <header class="questions__counters">
         <div class="questions__counter-number ">01</div>
         <div class="counters__wrap">
           <div class="counter__points">01</div>
-          <div class=" questions__time">0</div>
+          <div class=" questions__time">30</div>
         </div>
       </header>
-      <div class="questions__board">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim quo tempore beatae,
-        aliquid earum in impedit. Minima delectus possimus sequi neque facere numquam ?</div>
+      <div data-questions="board" class="questions__board">?</div>
     </div>
 
     <div class="questions__response-wrap">
@@ -53,7 +53,7 @@
         <div>
           <span class="response__options--alternative">A.</span>
           <div class="alternative__text">
-            <p>xxvxvxvgd</p>
+            <p data-questions="a">?</p>
           </div>
         </div>
       </button>
@@ -61,7 +61,7 @@
         <div>
           <span class="response__options--alternative">B.</span>
           <div class="alternative__text">
-            <p>kasdjksajdcbcxfdhsdgdsgdsgdsgsdgsdgsdgsdgdsgsdfdfgd</p>
+            <p data-questions="b">?</p>
           </div>
         </div>
       </button>
@@ -69,7 +69,7 @@
         <div>
           <span class="response__options--alternative">C.</span>
           <div class="alternative__text">
-            <p>kasdjksajdcbcxbxfgdhdfgdsgdsgsdgsdgsdgdsgsdgdsgdsgdsd</p>
+            <p data-questions="c">?</p>
           </div>
         </div>
       </button>
@@ -77,7 +77,7 @@
         <div>
           <span class="response__options--alternative">D.</span>
           <div class="alternative__text">
-            <p>kasdjksajdgdfsgsdgdsgsdgdsgdsgdsgsdgd</p>
+            <p data-questions="d">?</p>
           </div>
         </div>
       </button>
@@ -86,6 +86,8 @@
     </div>
 
   </section>
+
+  <script  src="./assets/js/script.js"></script>
 
 </body>
 
