@@ -1,0 +1,12 @@
+{
+  "questions": [
+    {
+      "pergunta": "pergunta",
+      "alternativaA": "Alternativa",
+      "alternativaB": "Alternativa",
+      "alternativaC": "Alternativa",
+      "alternativaD": "Alternativa",
+      "correta": "RespostaCerta"
+    }
+  ]
+}

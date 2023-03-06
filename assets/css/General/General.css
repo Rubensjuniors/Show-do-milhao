@@ -3,9 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 #body {
-  background: #063ca0 ;
-  height: 100%;
+  background: #063ca0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

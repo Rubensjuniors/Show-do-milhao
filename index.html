@@ -14,82 +14,83 @@
   <link rel="stylesheet" href="./assets/css/Style.css">
 </head>
 
-<body id="body">
+<body>
 
-  <section data-visible="" class="start ">
-    <figure>
-      <img class="start__logo" src="./assets/img/logo.png" alt="Logo Show do Milhão">
-    </figure>
-    <button data-button="start" class="start__button button-general">Start</button>
-  </section>
-
-
-  <section data-visible="" class="options options--js hiden">
-    <h1 class="options__title">Escolha um tema</h1>
-
-    <ul class="options__choose ">
-      <li><button data-button="variado" class="options__choose-button button-general choose__button--js">Variado</button></li>
-      <li><button data-button="portugues" class="options__choose-button button-general off choose__button--js">Portugues</button></li>
-      <li><button data-button="matematica" class="options__choose-button button-general off choose__button--js">Matematica</button></li>
-    </ul>
-  </section>
+  <main id="body">
+    <section data-visible="" class="start ">
+      <figure>
+        <img class="start__logo" src="./assets/img/logo.png" alt="Logo Show do Milhão">
+      </figure>
+      <button data-button="start" class="start__button button-general">Start</button>
+    </section>
 
 
-  <section data-visible="" class="questions questions--js hiden ">
-    <div class="questions__wrap">
-      <header class="questions__counters">
-        <div class="questions__counter-number ">01</div>
-        <div class="counters__wrap">
-          <div class="counter__points">01</div>
-          <div class=" questions__time">30</div>
-        </div>
-      </header>
-      <div data-questions="board" class="questions__board">?</div>
-    </div>
+    <section data-visible="" class="options options--js hiden">
+      <h1 class="options__title">Escolha um tema</h1>
 
-    <div class="questions__response-wrap">
+      <ul class="options__choose ">
+        <li><button data-button="variado"
+            class="options__choose-button button-general choose__button--js">Variado</button></li>
+        <li><button disabled data-button="portugues"
+            class="options__choose-button button-general  choose__button--js">Portugues</button></li>
+        <li><button disabled data-button="matematica"
+            class="options__choose-button button-general  choose__button--js">Matematica</button></li>
+      </ul>
+    </section>
 
-      <button data-response="A" class="response__options">
-        <div>
-          <span class="response__options--alternative">A.</span>
-          <div class="alternative__text">
-            <p data-questions="alternative-a">?</p>
+
+    <section data-visible="" class="questions questions--js hiden ">
+      <div class="questions__wrap">
+        <header class="questions__counters">
+          <div class="questions__counter-number ">01</div>
+          <div class="counters__wrap">
+            <div class="counter__points">01</div>
+            <div class=" questions__time">30</div>
           </div>
-        </div>
-      </button>
-      <button data-response="B" class="response__options">
-        <div>
-          <span class="response__options--alternative">B.</span>
-          <div class="alternative__text">
-            <p data-questions="alternative-b">?</p>
+        </header>
+        <div data-questions="board" class="questions__board">?</div>
+      </div>
+
+      <div class="questions__response-wrap">
+
+        <button data-response="A" class="response__options">
+          <div>
+            <span class="response__options--alternative">A.</span>
+            <div class="alternative__text">
+              <p data-questions="alternative-a">?</p>
+            </div>
           </div>
-        </div>
-      </button>
-      <button data-response="C" class="response__options">
-        <div>
-          <span class="response__options--alternative">C.</span>
-          <div class="alternative__text">
-            <p data-questions="alternative-c">?</p>
+        </button>
+        <button data-response="B" class="response__options">
+          <div>
+            <span class="response__options--alternative">B.</span>
+            <div class="alternative__text">
+              <p data-questions="alternative-b">?</p>
+            </div>
           </div>
-        </div>
-      </button>
-      <button data-response="D" class="response__options">
-        <div>
-          <span class="response__options--alternative">D.</span>
-          <div class="alternative__text">
-            <p data-questions="alternative-d">?</p>
+        </button>
+        <button data-response="C" class="response__options">
+          <div>
+            <span class="response__options--alternative">C.</span>
+            <div class="alternative__text">
+              <p data-questions="alternative-c">?</p>
+            </div>
           </div>
-        </div>
-      </button>
+        </button>
+        <button data-response="D" class="response__options">
+          <div>
+            <span class="response__options--alternative">D.</span>
+            <div class="alternative__text">
+              <p data-questions="alternative-d">?</p>
+            </div>
+          </div>
+        </button>
 
-      <button class="questions__desistir button-general">Desistir</button>
-    </div>
-
-   
-
-  </section>
-
-  <script  src="./assets/js/script.js"></script>
+        <button class="questions__desistir button-general">Desistir</button>
+      </div>
+    </section>
+  </main>
+  <script src="./assets/js/script.js"></script>
 
 </body>
 

@@ -7,27 +7,38 @@ const alternativeDText = document.querySelector('[data-questions="alternative-d"
 
 const containerButtons = document.querySelectorAll('[data-visible=""]');
 
-function handleContainerButtonClick(event) {
-  const hiddenClass = "hiden";
-  const buttons = event.target.getAttribute("data-button");
+ const urlQuestionsVariado = "./assets/json/variado.json";
+ const urlQuestionsPortugues = "./assets/json/portugues.json";
+ const urlQuestionsMatematica= "./assets/json/matematica.json";
+ const hiddenClass = "hiden";
 
-  if (!this.classList.contains(hiddenClass)) {
-    if (typeof buttons === "string") {
-      this.classList.add(hiddenClass);
-      containerButtons[1].classList.remove(hiddenClass);
-      if (buttons === "variado") {
-        this.classList.add(hiddenClass);
-        containerButtons[2].classList.remove(hiddenClass);
-        fetchQuestions(Math.floor(Math.random() * 30), "./assets/json/data.json");
-      }else if(buttons === "portugue"){
-        console.log('off')
-      }else{
-        console.log('off')
-      }
-    }
+ function handleContainerButtonClick(event) {
+  const buttons = event.target.getAttribute("data-button");
+  if (this.classList.contains(hiddenClass) || !buttons) {
+    return;
+  }
+  this.classList.add(hiddenClass);
+  containerButtons[1].classList.remove(hiddenClass);
+  switch (buttons) {
+    case "variado":
+      containerButtons[1].classList.add(hiddenClass);
+      containerButtons[2].classList.remove(hiddenClass);
+      fetchQuestions(Math.floor(Math.random() * 30), urlQuestionsVariado);
+      break;
+    case "portugues":
+      containerButtons[1].classList.add(hiddenClass);
+      containerButtons[2].classList.remove(hiddenClass);
+      fetchQuestions(Math.floor(Math.random() * 30), urlQuestionsPortugues);
+      break;
+    case "matematica":
+      containerButtons[1].classList.add(hiddenClass);
+      containerButtons[2].classList.remove(hiddenClass);
+      fetchQuestions(Math.floor(Math.random() * 30), urlQuestionsMatematica);
+      break;
+    default:
+      break;
   }
 }
-
 containerButtons.forEach((button) => {
   button.addEventListener("click", handleContainerButtonClick);
 });
