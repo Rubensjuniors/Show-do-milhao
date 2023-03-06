@@ -73,7 +73,7 @@ function setQuestions(questionData) {
 }
 
 
-
+fetchQuestions(Math.floor(Math.random() * 30), urlQuestionsVariado);
 
 
 

@@ -22,7 +22,7 @@
   text-transform: uppercase;
   font-weight: bold;
   border-radius: 50px;
-  padding: 0.8rem 4rem;
+  padding: 0.5rem 3.5rem;
   cursor: pointer;
   box-shadow: var(--shadow-soft);
 }
