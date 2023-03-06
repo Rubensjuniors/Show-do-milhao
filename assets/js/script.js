@@ -12,6 +12,12 @@ const containerButtons = document.querySelectorAll('[data-visible=""]');
  const urlQuestionsMatematica= "./assets/json/matematica.json";
  const hiddenClass = "hiden";
 
+const helpButtons = document.querySelectorAll('.help__button--js');
+const modal = document.querySelector(".popups-js");
+const close = document.querySelector('.close-js');
+
+
+
  function handleContainerButtonClick(event) {
   const buttons = event.target.getAttribute("data-button");
   if (this.classList.contains(hiddenClass) || !buttons) {
@@ -75,7 +81,19 @@ function setQuestions(questionData) {
 
 fetchQuestions(Math.floor(Math.random() * 30), urlQuestionsVariado);
 
+function handleModalClick(event){
+  const cards = event.target.getAttribute( 'alt');
+  if(cards === 'picked'){
+    modal.classList.remove(hiddenClass)
+  }
+   
+console.log(event.target.getAttribute( 'alt'))
+}
 
+helpButtons.forEach((button) =>{
+  button.addEventListener('click', handleModalClick)
+})
 
-
-
+close.addEventListener('click', ()=>{
+  modal.classList.add(hiddenClass)
+})

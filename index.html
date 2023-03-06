@@ -51,17 +51,17 @@
         <div data-questions="board" class="questions__board">?</div>
         <ul class="questions__help">
           <li>
-            <button class="help__button"><img src="./assets/img/icons/help-cards.png" alt="Picked-Cards"></button>
+            <button class="help__button help__button--js" data-card="picked"><img src="./assets/img/icons/help-cards.png" alt="picked"></button>
           </li>
 
           <li>
-            <button class="help__button"><img src="./assets/img/icons/help-person.png" alt="Person-Cards"></button>
+            <button class="help__button help__button--js" data-card="person"><img src="./assets/img/icons/help-person.png" alt="Person"></button>
           </li>
 
           <li>
-            <button class="help__button"><img src="./assets/img/icons/help-abc.png" alt="abc-Cards"></button>
+            <button class="help__button help__button--js" data-card="abc"><img src="./assets/img/icons/help-abc.png" alt="abc"></button>
           </li>
-        
+
         </ul>
       </div>
 
@@ -104,6 +104,34 @@
       </div>
     </section>
   </main>
+
+  <section class="popups hiden popups-js">
+
+    <div class="popups__help-picked">
+
+      <button class="close close-js">X</button>
+
+      <h1 class="help__picked-title">Escolha uma carta</h1>
+
+      <ul class="popups__help-picked-list">
+
+        <li class="picked__item">
+          <button><img class="picked__item-img" src="./assets/img/icons/cards_help-rei.png" alt=""></button>
+          <span class="item__picked">?</span>
+        </li>
+        <li class="picked__item">
+          <button><img class="picked__item-img" src="./assets/img/icons/cards_help-dama.png" alt=""></button>
+          <span class="item__picked">?</span>
+        </li>
+        <li class="picked__item">
+          <button><img class="picked__item-img" src="./assets/img/icons/cards_help-j.png" alt="">   </button>
+          <span class="item__picked">?</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  
   <script src="./assets/js/script.js"></script>
 
 </body>
