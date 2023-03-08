@@ -27,6 +27,8 @@
   box-shadow: var(--shadow-soft);
 }
 
-.button-general:hover{
-  background:var(--color-button-hover);
+@media(min-width:700px){
+  .button-general:hover{
+    background:var(--color-button-hover);
+  }
 }
