@@ -4,4 +4,11 @@
 @import "./Body/Start.css";
 @import "./Body/Options.css";
 @import "./Body/Questions.css";
-@import "./Body/Popups.css";
+
+
+@import "./Modal/Modal.css";
+@import "./Modal/win.css";
+@import "./Modal/Erro.css";
+@import "./Modal/Desistir.css";
+@import "./Modal/help-picked.css";
+@import "./Modal/Help-people.css";

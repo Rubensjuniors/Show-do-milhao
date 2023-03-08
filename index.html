@@ -17,7 +17,7 @@
 <body>
 
   <main id="body">
-    <section data-visible="" class="start ">
+    <section data-visible="" class="start hiden">
       <figure>
         <img class="start__logo" src="./assets/img/logo.png" alt="Logo Show do Milhão">
       </figure>
@@ -39,27 +39,33 @@
     </section>
 
 
-    <section data-visible="" class="questions questions--js hiden ">
+    <section data-visible="" class="questions questions--js  ">
       <div class="questions__wrap">
         <header class="questions__counters">
           <div class="questions__counter-number ">01</div>
           <div class="counters__wrap">
-            <div class="counter__points">01</div>
+            <div class="counter__points">
+              <img src="./assets/img/icons/icons8-dogecoin-48.png" alt="" width="25px">
+              <span>3444</span>
+            </div>
             <div class=" questions__time">30</div>
           </div>
         </header>
         <div data-questions="board" class="questions__board">?</div>
         <ul class="questions__help">
           <li>
-            <button class="help__button help__button--js" data-card="picked"><img src="./assets/img/icons/help-cards.png" alt="picked"></button>
+            <button class="help__button help__button--js" data-card="picked"><img
+                src="./assets/img/icons/help-cards.png" alt="picked"></button>
           </li>
 
           <li>
-            <button class="help__button help__button--js" data-card="person"><img src="./assets/img/icons/help-person.png" alt="Person"></button>
+            <button class="help__button help__button--js" data-card="person"><img
+                src="./assets/img/icons/help-person.png" alt="Person"></button>
           </li>
 
           <li>
-            <button class="help__button help__button--js" data-card="abc"><img src="./assets/img/icons/help-abc.png" alt="abc"></button>
+            <button class="help__button help__button--js" data-card="abc"><img src="./assets/img/icons/help-abc.png"
+                alt="abc"></button>
           </li>
 
         </ul>
@@ -105,33 +111,81 @@
     </section>
   </main>
 
-  <section class="popups hiden popups-js">
 
-    <div class="popups__help-picked">
+  <div class="modal hiden" data-modal="">
 
-      <button class="close close-js">X</button>
+    <div class="modal__win hiden" data-modal="win">
+      <h1 class="modal__title win__title">Você desitiu com <span class="desistir__title-coin"> 23432</span></h1>
+      <div class="win__gif">
+        <img src="./assets/img/Gifs/_23024_10_orig.gif" alt="">
+      </div>
+      <button class="button-general win__button">Voltar</button>
+    </div>
 
-      <h1 class="help__picked-title">Escolha uma carta</h1>
+    <div class="modal__erro hiden" data-modal="erro">
+        <h1 class="modal__title erro__title">Você desitiu com <span class="desistir__title-coin"> 23432</span></h1>
+      <div class="erro__gif">
+        <img src="./assets/img/Gifs/happy-happy-dog.gif" alt="">
+      </div>
+      <button class="button-general erro__button">Voltar</button>
+    </div>
 
-      <ul class="popups__help-picked-list">
+    <div class="modal__desistir hiden" data-modal="desistir">
+      <h1 class="modal__title desistir__title">Você desitiu com <span class="desistir__title-coin"> 23432</span></h1>
+      <div class="desistir__gif">
+        <img src="./assets/img/Gifs/dog-crying.gif" alt="gif_triste">
+      </div>
+      <button class="button-general desistir__button">Voltar</button>
+    </div>
 
-        <li class="picked__item">
-          <button><img class="picked__item-img" src="./assets/img/icons/cards_help-rei.png" alt=""></button>
-          <span class="item__picked">?</span>
+    <div class="modal__picked hiden" data-modal="help-card">
+      <button class="modal__close">X</button>
+      <h1 class="picked__title">Escolha uma carta</h1>
+      <ul class="picked__list">
+        <li class="picked__list--card">
+          <button><img class="picked__card--img" src="./assets/img/icons/cards_help-rei.png" alt=""></button>
+          <span class="picked__card--alternative">?</span>
         </li>
-        <li class="picked__item">
-          <button><img class="picked__item-img" src="./assets/img/icons/cards_help-dama.png" alt=""></button>
-          <span class="item__picked">?</span>
+        <li class="picked__list--card">
+          <button><img class="picked__card--img" src="./assets/img/icons/cards_help-dama.png" alt=""></button>
+          <span class="picked__card--alternative">?</span>
         </li>
-        <li class="picked__item">
-          <button><img class="picked__item-img" src="./assets/img/icons/cards_help-j.png" alt="">   </button>
-          <span class="item__picked">?</span>
+        <li class="picked__list--card">
+          <button><img class="picked__card--img" src="./assets/img/icons/cards_help-j.png" alt=""> </button>
+          <span class="picked__card--alternative">?</span>
         </li>
       </ul>
     </div>
-  </section>
 
-  
+    <div class="modal__people hiden" data-modal="help-people">
+      <button class="modal__close">X</button>
+      <h1 class="modal__title">Opiniões das pessoas</h1>
+      <ul class="people__list">
+        <li class="people__card">
+          <span class="people__card--alternative">?</span>
+          <div class="people__card--img">
+            <img src="./assets/img/icons/person-people.png" alt="">
+          </div>
+        </li>
+        <li class="people__card">
+          <span class="people__card--alternative">?</span>
+          <div class="people__card--img">
+            <img src="./assets/img/icons/person-people.png" alt="">
+          </div>
+        </li>
+        <li class="people__card">
+          <span class="people__card--alternative">?</span>
+          <div class="people__card--img">
+            <img src="./assets/img/icons/person-people.png" alt="">
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+  </div>
   <script src="./assets/js/script.js"></script>
 
 </body>

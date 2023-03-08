@@ -36,6 +36,11 @@
   position: relative;
   
 }
+.counter__points{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 .counter__points::before{
   content: '';
   display: block;

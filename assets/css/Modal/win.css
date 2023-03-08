@@ -1,0 +1,22 @@
+.modal__win{
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+}
+
+@media (min-width: 700px) {
+  .modal__win {
+    width: 500px;
+  }
+  .win__title {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
