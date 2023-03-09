@@ -9,7 +9,7 @@ const boardContainer = document.querySelector('#questions__board-js');
 
 const helpsQuestions = document.querySelectorAll(".help__button--js");
 
-const alternativasButtons = document.querySelectorAll('.response__options-js');
+const alternativasButtons = Array.from(document.querySelectorAll('.response__options-js'));
 const resposta = document.querySelectorAll('[data-response]');
 
 
@@ -20,6 +20,7 @@ const alternativeDText = document.querySelector("#alternative-d");
 
 const wrapModal = document.querySelector('[data-modal]')
 const erroModal = document.querySelector('[data-modal^="erro"]')
+const buttonVoltar = document.querySelectorAll('[data-button^="voltar"]')
 
 
 const hiddenClass = "hiden";
@@ -94,12 +95,18 @@ function nextQuestions(element){
 function handleClickAlternativa(){
   const {correta} = json
   const picked = this.querySelector('div').innerText;
-
+  const corretaBox = alternativasButtons.filter(box =>{
+    const boxs = box.querySelector('div').innerHTML
+    if(boxs === correta){
+      return box.classList.add('green');
+    }
+  })
   if(correta === picked){
     this.classList.add('green');
     nextQuestions(this)
   }else{
     this.classList.add('red');
+    corretaBox
     setTimeout(()=>{
       wrapModal.classList.remove(hiddenClass)
       erroModal.classList.remove(hiddenClass)
@@ -113,4 +120,16 @@ alternativa.addEventListener('click', handleClickAlternativa)
 alternativa.addEventListener('touchstart', handleClickAlternativa)
 })
 
+buttonVoltar.forEach(button =>{
+  ['click','touchstart'].forEach(event => {
+    button.addEventListener(event, () =>{
 
+        containerButtons[1].classList.add(hiddenClass)
+        containerButtons[2].classList.add(hiddenClass)
+        containerButtons[0].classList.remove(hiddenClass)
+
+        wrapModal.classList.add(hiddenClass)
+      erroModal.classList.add(hiddenClass)
+    })
+  })
+})
