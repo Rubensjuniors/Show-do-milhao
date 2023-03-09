@@ -86,7 +86,7 @@ function setQuestions(questionData) {
   alternativeDText.textContent = questionData.alternativaD;
 }
 function nextQuestions(element){
-  setInterval(()=>{
+  setTimeout(()=>{
     fetchQuestions(Math.floor(Math.random() * 30), urlQuestionsVariado);
     element.classList.remove('green');
    },600)
@@ -100,7 +100,7 @@ function handleClickAlternativa(){
     nextQuestions(this)
   }else{
     this.classList.add('red');
-    setInterval(()=>{
+    setTimeout(()=>{
       wrapModal.classList.remove(hiddenClass)
       erroModal.classList.remove(hiddenClass)
     },600)
