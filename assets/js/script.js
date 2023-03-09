@@ -18,6 +18,9 @@ const alternativeBText = document.querySelector("#alternative-b");
 const alternativeCText = document.querySelector("#alternative-c");
 const alternativeDText = document.querySelector("#alternative-d");
 
+const wrapModal = document.querySelector('[data-modal]')
+const erroModal = document.querySelector('[data-modal^="erro"]')
+
 
 const hiddenClass = "hiden";
 const urlQuestionsVariado = "./assets/json/variado.json";
@@ -82,15 +85,25 @@ function setQuestions(questionData) {
   alternativeCText.textContent = questionData.alternativaC;
   alternativeDText.textContent = questionData.alternativaD;
 }
-
+function nextQuestions(element){
+  setInterval(()=>{
+    fetchQuestions(Math.floor(Math.random() * 30), urlQuestionsVariado);
+    element.classList.remove('green');
+   },600)
+}
 function handleClickAlternativa(){
   const {correta} = json
   const picked = this.querySelector('div').innerText;
 
   if(correta === picked){
-    console.log("deu")
+    this.classList.add('green');
+    nextQuestions(this)
   }else{
-    console.log('nao')
+    this.classList.add('red');
+    setInterval(()=>{
+      wrapModal.classList.remove(hiddenClass)
+      erroModal.classList.remove(hiddenClass)
+    },600)
   }
 
  

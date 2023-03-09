@@ -27,6 +27,14 @@
   box-shadow: var(--shadow-soft);
 }
 
+.green{
+  background: greenyellow;
+}
+
+.red{
+  background: red;
+}
+
 @media(min-width:700px){
   .button-general:hover{
     background:var(--color-button-hover);
