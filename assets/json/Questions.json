@@ -1,5 +1,5 @@
 {
-  "questions": [
+  "variado": [
     {
       "pergunta": "Setentrional e Meridional são sinônimos de...",
       "alternativaA": "Leste e Oeste",
@@ -242,5 +242,45 @@
       "alternativaD": "Monte Branco",
       "correta": "Monte Everest"
     }
+  ],
+
+  "portugues": [
+    {
+      "pergunta": "pergunta",
+      "alternativaA": "Alternativa",
+      "alternativaB": "Alternativa",
+      "alternativaC": "Alternativa",
+      "alternativaD": "Alternativa",
+      "correta": "RespostaCerta"
+    },
+    {
+      "pergunta": "Qual montanha se localiza entre a fronteira do Tibet com o Nepal?",
+      "alternativaA": "Monte Everest",
+      "alternativaB": "Monte Carlo",
+      "alternativaC": "Monte Fuji",
+      "alternativaD": "Monte Branco",
+      "correta": "Monte Everest"
+    }
+  ],
+  "matematica": [
+    {
+      "pergunta": "pergunta",
+      "alternativaA": "Alternativa",
+      "alternativaB": "Alternativa",
+      "alternativaC": "Alternativa",
+      "alternativaD": "Alternativa",
+      "correta": "RespostaCerta"
+    },
+    {
+      "pergunta": "Um ano e composto por quantos trimestres???",
+      "alternativaA": "2",
+      "alternativaB": "4",
+      "alternativaC": "6",
+      "alternativaD": "8",
+      "correta": "4"
+    }
   ]
+
+  
+
 }

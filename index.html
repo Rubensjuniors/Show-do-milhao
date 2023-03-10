@@ -17,7 +17,7 @@
 <body>
 
   <main id="body">
-    <section class="start  visible ">
+    <section id="start-js" class="start">
       <figure>
         <img class="start__logo" src="./assets/img/logo.png" alt="Logo Show do Milhão" title="Feita por Eduardo Barbosa">
       </figure>
@@ -25,29 +25,29 @@
     </section>
 
 
-    <section class="options options--js hiden visible">
+    <section id="options-js" class="options options--js hiden visible">
       <h1 class="options__title">Escolha um tema</h1>
 
       <ul class="options__choose ">
-        <li><button data-button="variado" class="options__choose-button button-general">Variado</button></li>
-        <li><button disabled data-button="portugues" class="options__choose-button button-general">Portugues</button>
+        <li><button data-tema="variado" class="options__choose-button button-general">Variado</button></li>
+        <li><button disabled data-tema="portugues" class="options__choose-button button-general">Portugues</button>
         </li>
-        <li><button disabled data-button="matematica" class="options__choose-button button-general">Matematica</button>
+        <li><button disabled data-tema="matematica" class="options__choose-button button-general">Matematica</button>
         </li>
       </ul>
     </section>
 
 
-    <section class="questions questions--js visible hiden">
+    <section id="questions-js" class="questions hiden">
       <div class="questions__wrap">
         <header class="questions__counters">
-          <div class="questions__counter-number" id="questions__counter--js">?</div>
+          <div class="questions__counter-number" id="questions__counter--js">1</div>
           <div class="counters__wrap">
             <div class="counter__points">
               <img src="./assets/img/icons/icons8-dogecoin-48.png" alt="" width="25px">
-              <span id="questions__coin-js">?</span>
+              <span id="questions__coin-js"></span>
             </div>
-            <div class=" questions__time" id="questions__time-js">?</div>
+            <div class=" questions__time" id="questions__time-js"></div>
           </div>
         </header>
 
@@ -94,10 +94,14 @@
         <button class="questions__desistir button-general">Desistir</button>
       </div>
     </section>
+
+
+
   </main>
 
 
-  <div class="modal hiden" data-modal="">
+
+  <div id="modal-js" class="modal hiden">
 
     <div class="modal__win hiden" data-modal="win">
       <h1 class="modal__title win__title">Você desitiu com <span class="desistir__title-coin"> 23432</span></h1>
@@ -108,7 +112,7 @@
     </div>
 
     <div class="modal__erro hiden" data-modal="erro">
-      <h1 class="modal__title erro__title">Você desitiu com <span class="desistir__title-coin"> 23432</span></h1>
+      <h1 class="modal__title erro__title">Você Errou</h1>
       <div class="erro__gif">
         <img src="./assets/img/Gifs/happy-happy-dog.gif" alt="">
       </div>
@@ -171,7 +175,7 @@
 
 
   </div>
-  <script src="./assets/js/script.js"></script>
+  <script type="module" src="./assets/js/script.js"></script>
 
 </body>
 

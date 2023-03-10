@@ -143,9 +143,9 @@ padding: 10px;
   }
 
   .response__options:hover, .help__button:hover{
-    transform: scale(1.02);
+    transform: scale(1.03);
     transition: .3s;
-    border-color: rgba(0, 0, 0, 0.3) !important;
+
   }
   .response__options{
     min-width: 350px;

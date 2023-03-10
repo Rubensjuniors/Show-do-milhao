@@ -33,3 +33,12 @@ border-color: transparent;
 .hiden{
   display: none !important;
 }
+
+
+.copy{
+position: absolute;
+  text-align: center;
+  bottom: 10px;
+  /* color: #ffffff; */
+  font-family: var(--font-nunito);
+}
