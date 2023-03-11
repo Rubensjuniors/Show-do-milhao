@@ -4,7 +4,7 @@ const timeQuestions = document.querySelector("#questions__time-js");
 export const counterCoin = document.querySelector("#questions__coin-js");
 
 let counter = 2;
-let time = 60;
+let time = 30;
 let dogecoins = 2000;
 
 counterCoin.textContent = dogecoins;
@@ -35,18 +35,26 @@ export function dogeCoinsCounter() {
  console.log(currentNumber)
 }
 
-export function counterTime() {
+export function counterTime(stop) {
   const parar = setInterval(() => {
     timeQuestions.textContent = time--;
     if (time <= -1) {
       clearInterval(parar);
+      visibleModal('zero');
     }
-  }, 900);
+  }, 850);
+
+ if(stop === true){
+  clearInterval(parar);
+  console.log('deu')
+ }
+
 }
+
 export function clearTime() {
   return (time = 0);
 }
 export function resetTime() {
-  time = 60;
+  time = 30;
 }
 

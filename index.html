@@ -18,9 +18,9 @@
 
   <main id="body">
     <section id="start-js" class="start">
-      <figure>
+      <picture>
         <img class="start__logo" src="./assets/img/logo.png" alt="Logo Show do Milhão" title="Feita por Eduardo Barbosa">
-      </figure>
+      </picture>
       <button data-button="start" class="start__button button-general">Start</button>
     </section>
 
@@ -105,9 +105,9 @@
 
     <div class="modal__win hiden" data-modal="win">
       <h1 class="modal__title win__title">Você Ganhou <span class="desistir__title-coin"> 1.000.000</span></h1>
-      <div class="win__gif">
+      <picture class="win__gif">
         <img src="./assets/img/Gifs/_23024_10_orig.gif" alt="">
-      </div>
+      </picture>
       <button data-button="voltar" class="button-general win__button modal__button-js">Voltar</button>
     </div>
 
@@ -121,10 +121,18 @@
 
     <div class="modal__desistir hiden" data-modal="desistir">
       <h1 class="modal__title desistir__title">Você desitiu com <span class="desistir__title-coin  desistir__title-coin-js"> 23432</span></h1>
-      <div class="desistir__gif">
+      <picture class="desistir__gif">
         <img src="./assets/img/Gifs/dog-crying.gif" alt="gif_triste">
-      </div>
+      </picture>
       <button data-button="voltar" class="button-general desistir__button modal__button-js">Voltar</button>
+    </div>
+    
+    <div class="modal__time hiden" data-modal="zero">
+      <h1 class="modal__title time__title">Tempo Esgotado</h1>
+      <picture class="time__gif">
+        <img src="./assets/img/Gifs/dog-crying.gif" alt="gif_triste">
+      </picture>
+      <button data-button="voltar" class="button-general time__button modal__button-js">Voltar</button>
     </div>
 
     <div class="modal__picked hiden" data-modal="help-picked">
