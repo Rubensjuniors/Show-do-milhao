@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -54,17 +54,17 @@
         <div id="questions__board-js" class="questions__board">?</div>
         <ul class="questions__help">
           <li>
-            <button class="help__button help__button--js" data-card="picked"><img
+            <button class="help__button help__button--js" data-card="help-picked"><img
                 src="./assets/img/icons/help-cards.png" alt="picked"></button>
           </li>
 
           <li>
-            <button class="help__button help__button--js" data-card="person"><img
+            <button class="help__button help__button--js" data-card="help-people"><img
                 src="./assets/img/icons/help-person.png" alt="Person"></button>
           </li>
 
           <li>
-            <button class="help__button help__button--js" data-card="abc"><img src="./assets/img/icons/help-abc.png"
+            <button class="help__button help__button--js" data-card="help-abc"><img src="./assets/img/icons/help-abc.png"
                 alt="abc"></button>
           </li>
 
@@ -91,7 +91,7 @@
             <div class="alternative__text" id="alternative-d"></div>
         </button>
 
-        <button class="questions__desistir button-general">Desistir</button>
+        <button class="questions__desistir button-general button-desistir-js">Desistir</button>
       </div>
     </section>
 
@@ -104,11 +104,11 @@
   <div id="modal-js" class="modal hiden">
 
     <div class="modal__win hiden" data-modal="win">
-      <h1 class="modal__title win__title">Você desitiu com <span class="desistir__title-coin"> 23432</span></h1>
+      <h1 class="modal__title win__title">Você Ganhou <span class="desistir__title-coin"> 1.000.000</span></h1>
       <div class="win__gif">
         <img src="./assets/img/Gifs/_23024_10_orig.gif" alt="">
       </div>
-      <button data-button="voltar" class="button-general win__button">Voltar</button>
+      <button data-button="voltar" class="button-general win__button modal__button-js">Voltar</button>
     </div>
 
     <div class="modal__erro hiden" data-modal="erro">
@@ -116,19 +116,19 @@
       <div class="erro__gif">
         <img src="./assets/img/Gifs/happy-happy-dog.gif" alt="">
       </div>
-      <button data-button="voltar" class="button-general erro__button">Voltar</button>
+      <button data-button="voltar" class="button-general erro__button modal__button-js">Voltar</button>
     </div>
 
     <div class="modal__desistir hiden" data-modal="desistir">
-      <h1 class="modal__title desistir__title">Você desitiu com <span class="desistir__title-coin"> 23432</span></h1>
+      <h1 class="modal__title desistir__title">Você desitiu com <span class="desistir__title-coin  desistir__title-coin-js"> 23432</span></h1>
       <div class="desistir__gif">
         <img src="./assets/img/Gifs/dog-crying.gif" alt="gif_triste">
       </div>
-      <button data-button="voltar" class="button-general desistir__button">Voltar</button>
+      <button data-button="voltar" class="button-general desistir__button modal__button-js">Voltar</button>
     </div>
 
-    <div class="modal__picked hiden" data-modal="help-card">
-      <button class="modal__close">X</button>
+    <div class="modal__picked hiden" data-modal="help-picked">
+      <button class="modal__close modal__close-js">X</button>
       <h1 class="picked__title">Escolha uma carta</h1>
       <ul class="picked__list">
         <li class="picked__list--card">
@@ -147,7 +147,7 @@
     </div>
 
     <div class="modal__people hiden" data-modal="help-people">
-      <button class="modal__close">X</button>
+      <button class="modal__close modal__close-js">X</button>
       <h1 class="modal__title">Opiniões das pessoas</h1>
       <ul class="people__list">
         <li class="people__card">

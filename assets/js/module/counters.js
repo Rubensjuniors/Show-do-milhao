@@ -1,6 +1,7 @@
+import { visibleModal } from './backStart.js'
 const counterQuestions = document.querySelector("#questions__counter--js");
 const timeQuestions = document.querySelector("#questions__time-js");
-const counterCoin = document.querySelector("#questions__coin-js");
+export const counterCoin = document.querySelector("#questions__coin-js");
 
 let counter = 2;
 let time = 60;
@@ -13,7 +14,8 @@ export function numberQuestions() {
   counterQuestions.textContent = counter++;
   if (counter > 21) {
     counterQuestions.textContent = 20;
-    console.log("ganhou");
+    timeQuestions.textContent = 0
+    visibleModal('win');
   }
 }
 
@@ -38,7 +40,6 @@ export function counterTime() {
     timeQuestions.textContent = time--;
     if (time <= -1) {
       clearInterval(parar);
-      console.log("tempo esgotado");
     }
   }, 900);
 }

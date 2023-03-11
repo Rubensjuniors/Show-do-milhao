@@ -9,7 +9,8 @@ const buttonTemas = Array.from(document.querySelectorAll("[data-tema]"));
 
 export function initOpitons() {
   buttonTemas.forEach((tema) => {
-    tema.addEventListener("pointerdown", checkTema);
+    tema.addEventListener("click", checkTema);
+    tema.addEventListener("touchstart", checkTema);
   });
 
   function checkTema() {

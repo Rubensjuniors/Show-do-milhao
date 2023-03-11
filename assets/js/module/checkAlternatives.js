@@ -1,13 +1,14 @@
 import { correct, randomNumber, dataQuestions, setQuestions } from './setQuestions.js'
 import { resetTime, clearTime, numberQuestions, dogeCoinsCounter } from './counters.js'
-import visibleModal from './modal.js'
+import {visibleModal} from './backStart.js'
 
 const alternativasButtons = Array.from(document.querySelectorAll('.response__options-js'));
 
  export default function initCheck(){
 
   alternativasButtons.forEach(button => {
-    button.addEventListener('pointerdown', checkAlternativa)
+    button.addEventListener('click', checkAlternativa)
+    button.addEventListener('touchstart', checkAlternativa)
   })
 
   function checkAlternativa(){
