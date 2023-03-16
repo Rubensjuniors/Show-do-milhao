@@ -31,7 +31,6 @@ const pickedThema = (option) => {
 
 const selectThema = (event) => {
   const themaPicked = event.currentTarget.getAttribute("data-tema");
-  console.log(themaPicked)
   return pickedThema(themaPicked);
 };
 

@@ -5,6 +5,8 @@ const alternativeBText = document.querySelector("#alternative-b");
 const alternativeCText = document.querySelector("#alternative-c");
 const alternativeDText = document.querySelector("#alternative-d");
 
+export let correct;
+
 export const questionsApikey = (key, thema) => {
   fetch(key)
     .then((r) => r.json())
@@ -16,6 +18,7 @@ export const questionsApikey = (key, thema) => {
     });
 };
 
+
 const setQuestions = (questions, index)=>{
   const question = questions[index]
 
@@ -25,6 +28,7 @@ const setQuestions = (questions, index)=>{
   alternativeCText.textContent = question.alternativaC;
   alternativeDText.textContent = question.alternativaD;
 
+  correct = question.correta
 }
 
 
