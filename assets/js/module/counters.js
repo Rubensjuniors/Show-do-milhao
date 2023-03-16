@@ -40,7 +40,6 @@ export function counterTime(stop) {
     timeQuestions.textContent = time--;
     if (time <= -1) {
       clearInterval(parar);
-      visibleModal('zero');
     }
   }, 850);
 
