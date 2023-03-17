@@ -10,9 +10,9 @@ export function initGame() {
   );
 }
 
-export const hiddenConteiner = (ConteinerHidden, ConteinerVisible) => {
+export const hiddenConteiner = (conteinerHidden, conteinerVisible) => {
   return setTimeout(() => {
-    ConteinerHidden.classList.add(hiddenClass);
-    ConteinerVisible.classList.remove(hiddenClass);
+    conteinerHidden.classList.add(hiddenClass);
+    conteinerVisible.classList.remove(hiddenClass);
   }, 300);
 };

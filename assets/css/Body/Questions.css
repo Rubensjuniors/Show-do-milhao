@@ -13,7 +13,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 10px;
   
 }
@@ -31,9 +31,6 @@
   
 }
 .counters__wrap {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   font-family: var(--font-nunito);
   color: var(--color-white);
   font-size: var(--size-small);
@@ -45,8 +42,6 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  border-right: 2px solid #ffffff ;
-  padding-right: 20px;
 }
 
 .questions__board {

@@ -34,6 +34,10 @@
 .red{
   background: red;
 }
+.disabled{
+  background: #939393;
+  opacity: 0.5;
+}
 
 @media(min-width:700px){
   .button-general:hover{

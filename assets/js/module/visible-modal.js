@@ -1,8 +1,8 @@
 import { hiddenClass } from "./start.js";
 import { counterCoin } from "./counters.js";
 
-const modal = document.querySelector("#modal-js");
-const popups = Array.from(document.querySelectorAll("[data-modal]"));
+export const modal = document.querySelector("#modal-js");
+export const popups = Array.from(document.querySelectorAll("[data-modal]"));
 const backButton = document.querySelectorAll('.modal__button-js');
 const desistirButton = document.querySelector('.button-desistir-js');
 const panelDesistir = document.querySelector('.desistir__title-coin-js');
@@ -33,8 +33,9 @@ const backStart = () => window.location.reload(true);
 
 const quit = ()=> {
     visibleModal('desistir');
-    panelDesistir.textContent = counterCoin.textContent 
+    panelDesistir.innerText = (counterCoin.innerText)
   }
   desistirButton.addEventListener( 'click', quit)
+
 
 

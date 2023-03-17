@@ -1,3 +1,4 @@
+import {numberQuestions, dogeCoinsCounter} from './counters.js'
 
 const boardContainer = document.querySelector("#questions__board-js");
 const alternativeAText = document.querySelector("#alternative-a");
@@ -31,6 +32,7 @@ const setQuestions = (questions, index)=>{
   alternativeDText.textContent = question.alternativaD;
 
   correctAsk = question.correta
+  console.log(correctAsk)
 }
 
 
@@ -41,4 +43,8 @@ export const randomNumber = (limite) => {
   return numeroAleatorio;
 }
 
-export const nextQuestion = (data, index) => setQuestions(data,index);
+export const nextQuestion = (data, index) =>{
+  numberQuestions()
+  dogeCoinsCounter()
+  setQuestions(data,index);
+} 

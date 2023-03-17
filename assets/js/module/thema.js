@@ -1,6 +1,5 @@
-import { questionsApikey } from "./setQuestions.js";
 import { hiddenConteiner } from "./start.js";
-import { counterTime } from "./counters.js";
+import { questionsApikey } from "./setQuestions.js";
 
 export const optionsConteiner = document.querySelector("#options-js");
 export const questionsConteiner = document.querySelector("#questions-js");

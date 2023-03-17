@@ -22,6 +22,8 @@
         <img class="start__logo" src="./assets/img/logo.png" alt="Logo Show do Milhão" title="Feita por Eduardo Barbosa">
       </picture>
       <button data-button="start" class="start__button button-general">Start</button>
+
+      <p class="copy">Logo Feita Por Eduardo Barbosa</p>
     </section>
 
 
@@ -41,20 +43,19 @@
     <section id="questions-js" class="questions hiden">
       <div class="questions__wrap">
         <header class="questions__counters">
-          <div class="questions__counter-number" id="questions__counter--js">1</div>
+          <div class="questions__counter-number" id="questions__counter--js"></div>
           <div class="counters__wrap">
             <div class="counter__points">
               <img src="./assets/img/icons/icons8-dogecoin-48.png" alt="" width="25px">
               <span id="questions__coin-js"></span>
             </div>
-            <div class=" questions__time" id="questions__time-js"></div>
           </div>
         </header>
 
-        <div id="questions__board-js" class="questions__board">?</div>
+        <div id="questions__board-js" class="questions__board"></div>
         <ul class="questions__help">
           <li>
-            <button class="help__button help__button--js" data-card="help-picked"><img
+            <button  class="help__button help__button--js " data-card="help-picked"><img
                 src="./assets/img/icons/help-cards.png" alt="picked"></button>
           </li>
 
@@ -62,12 +63,6 @@
             <button class="help__button help__button--js" data-card="help-people"><img
                 src="./assets/img/icons/help-person.png" alt="Person"></button>
           </li>
-
-          <li>
-            <button class="help__button help__button--js" data-card="help-abc"><img src="./assets/img/icons/help-abc.png"
-                alt="abc"></button>
-          </li>
-
         </ul>
       </div>
 
@@ -120,35 +115,28 @@
     </div>
 
     <div class="modal__desistir hiden" data-modal="desistir">
-      <h1 class="modal__title desistir__title">Você desitiu com <span class="desistir__title-coin  desistir__title-coin-js"> 23432</span></h1>
+      <h1 class="modal__title desistir__title">Você desitiu com <span class="desistir__title-coin  desistir__title-coin-js"></span></h1>
       <picture class="desistir__gif">
         <img src="./assets/img/Gifs/dog-crying.gif" alt="gif_triste">
       </picture>
       <button data-button="voltar" class="button-general desistir__button modal__button-js">Voltar</button>
     </div>
     
-    <div class="modal__time hiden" data-modal="zero">
-      <h1 class="modal__title time__title">Tempo Esgotado</h1>
-      <picture class="time__gif">
-        <img src="./assets/img/Gifs/dog-crying.gif" alt="gif_triste">
-      </picture>
-      <button data-button="voltar" class="button-general time__button modal__button-js">Voltar</button>
-    </div>
 
     <div class="modal__picked hiden" data-modal="help-picked">
       <button class="modal__close modal__close-js">X</button>
       <h1 class="picked__title">Escolha uma carta</h1>
       <ul class="picked__list">
         <li class="picked__list--card">
-          <button><img class="picked__card--img" src="./assets/img/icons/cards_help-rei.png" alt=""></button>
+          <button data-carta="king"><img class="picked__card--img" src="./assets/img/icons/cards_help-rei.png" alt=""></button>
           <span class="picked__card--alternative">?</span>
         </li>
         <li class="picked__list--card">
-          <button><img class="picked__card--img" src="./assets/img/icons/cards_help-dama.png" alt=""></button>
+          <button data-carta="dama"><img class="picked__card--img" src="./assets/img/icons/cards_help-dama.png" alt=""></button>
           <span class="picked__card--alternative">?</span>
         </li>
         <li class="picked__list--card">
-          <button><img class="picked__card--img" src="./assets/img/icons/cards_help-j.png" alt=""> </button>
+          <button data-carta="king"><img class="picked__card--img" src="./assets/img/icons/cards_help-j.png" alt=""> </button>
           <span class="picked__card--alternative">?</span>
         </li>
       </ul>
@@ -178,11 +166,8 @@
         </li>
       </ul>
     </div>
-
-
-
-
   </div>
+
   <script type="module" src="./assets/js/script.js"></script>
 
 
