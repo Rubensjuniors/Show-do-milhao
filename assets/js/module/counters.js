@@ -1,4 +1,4 @@
-import { visibleModal } from './backStart.js'
+import { visibleModal } from "./visible-modal.js";
 const counterQuestions = document.querySelector("#questions__counter--js");
 const timeQuestions = document.querySelector("#questions__time-js");
 export const counterCoin = document.querySelector("#questions__coin-js");
@@ -14,25 +14,25 @@ export function numberQuestions() {
   counterQuestions.textContent = counter++;
   if (counter > 21) {
     counterQuestions.textContent = 20;
-    timeQuestions.textContent = 0
-    visibleModal('win');
+    timeQuestions.textContent = 0;
+    visibleModal("win");
   }
 }
 
 export function dogeCoinsCounter() {
- const currentNumber = +counterQuestions.textContent
- const currentCoins = +counterCoin.textContent
- if(currentNumber <= 5){
-  currentCoins + 1000 ;
-  console.log('somar 2.000')
-} else if(currentNumber > 5 && currentNumber <= 15){
-   console.log('somar 10.000')
-  }else if(currentNumber >= 15 && currentNumber <= 19){
-   console.log('somar 100.000')
-  }else{
-   console.log('somar 500.000')
- }
- console.log(currentNumber)
+  const currentNumber = +counterQuestions.textContent;
+  const currentCoins = +counterCoin.textContent;
+  if (currentNumber <= 5) {
+    currentCoins + 1000;
+    console.log("somar 2.000");
+  } else if (currentNumber > 5 && currentNumber <= 15) {
+    console.log("somar 10.000");
+  } else if (currentNumber >= 15 && currentNumber <= 19) {
+    console.log("somar 100.000");
+  } else {
+    console.log("somar 500.000");
+  }
+  console.log(currentNumber);
 }
 
 export function counterTime(stop) {
@@ -43,11 +43,10 @@ export function counterTime(stop) {
     }
   }, 850);
 
- if(stop === true){
-  clearInterval(parar);
-  console.log('deu')
- }
-
+  if (stop === true) {
+    clearInterval(parar);
+    console.log("deu");
+  }
 }
 
 export function clearTime() {
@@ -56,4 +55,3 @@ export function clearTime() {
 export function resetTime() {
   time = 30;
 }
-

@@ -5,13 +5,15 @@ const alternativeBText = document.querySelector("#alternative-b");
 const alternativeCText = document.querySelector("#alternative-c");
 const alternativeDText = document.querySelector("#alternative-d");
 
-export let correct;
+export let dataQuestions;
+export let correctAsk;
 
 export const questionsApikey = (key, thema) => {
   fetch(key)
     .then((r) => r.json())
     .then((data) => {
       setQuestions(data[thema], randomNumber(data[thema].length))
+      dataQuestions = data[thema]
     })
     .catch((error) => {
       console.error("Error fetching questions:", error);
@@ -28,7 +30,7 @@ const setQuestions = (questions, index)=>{
   alternativeCText.textContent = question.alternativaC;
   alternativeDText.textContent = question.alternativaD;
 
-  correct = question.correta
+  correctAsk = question.correta
 }
 
 
@@ -38,3 +40,5 @@ export const randomNumber = (limite) => {
   const numeroAleatorio = numerosPossiveis.splice(indiceAleatorio, 1)[0];
   return numeroAleatorio;
 }
+
+export const nextQuestion = (data, index) => setQuestions(data,index);
