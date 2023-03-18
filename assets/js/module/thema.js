@@ -3,34 +3,30 @@ import { questionsApikey } from "./setQuestions.js";
 
 export const optionsConteiner = document.querySelector("#options-js");
 export const questionsConteiner = document.querySelector("#questions-js");
-
-const buttonTemas = Array.from(document.querySelectorAll("[data-tema]"));
-const urlJson = "./assets/json/Questions.json";
+const themasButton = document.querySelectorAll('.themas__buttons-js')
 
 
 
-const pickedThema = (option) => {
-  const themas = {
-    variado(thema) {
-      questionsApikey(urlJson, thema);
-      hiddenConteiner(optionsConteiner, questionsConteiner);
-    },
-    portugues(thema) {
-      questionsApikey(urlJson, thema);
-      hiddenConteiner(optionsConteiner, questionsConteiner);
-    },
-    matematica(thema) {
-      questionsApikey(urlJson, thema);
-      hiddenConteiner(optionsConteiner, questionsConteiner);
-    },
-  };
+export function insertThemas(){
+  fetch('https://the-trivia-api.com/api/categories')
+  .then( r => {
+    if(r.ok){
+      return r.json()
+    }
+    return;
+  })
+  .then(theme => {
+    themasButton[0].setAttribute('data-theme', theme["General Knowledge"][0])
+    themasButton[1].setAttribute('data-theme', theme["Food & Drink"][0])
+    themasButton[2].setAttribute('data-theme', theme["Film & TV"][2])
+    themasButton[3].setAttribute('data-theme', theme["History"][0])
+    themasButton[4].setAttribute('data-theme', theme["Music"][0])
+  })
+}
 
-  return themas?.[option](option);
-};
-
-const selectThema = (event) => {
-  const themaPicked = event.currentTarget.getAttribute("data-tema");
-  return pickedThema(themaPicked);
-};
-
-buttonTemas.forEach((button) => button.addEventListener("click", selectThema));
+const selectThema = (event)=>{
+  const selectedTheme = event.currentTarget.getAttribute('data-theme')
+  questionsApikey(selectedTheme)
+  hiddenConteiner(optionsConteiner, questionsConteiner)
+}
+themasButton.forEach((button) => button.addEventListener("click", selectThema));

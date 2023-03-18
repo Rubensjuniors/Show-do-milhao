@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
   padding: 20px;
 }
 
@@ -13,21 +12,18 @@
   font-weight: bold;
   text-align: center;
   color: var(--color-white);
+  margin-bottom: 2rem;
 }
 
-.options__choose{
-  display: flex;
-  flex-direction: column;
+.themas__list{
+  display: grid;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap:1rem ;
 }
 
 .options__choose-button{
-
   width: 300px !important;
-}
-.options__choose-button[disabled]{
-  background: #c7c7c7;
 }
 
 @media (min-width: 700px) {

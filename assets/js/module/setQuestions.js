@@ -9,12 +9,14 @@ const alternativeDText = document.querySelector("#alternative-d");
 export let dataQuestions;
 export let correctAsk;
 
-export const questionsApikey = (key, thema) => {
-  fetch(key)
+
+export const questionsApikey = (thema) => {
+  const apiKey = `https://the-trivia-api.com/api/questions?limit=20&categories=${thema}`;
+  fetch(apiKey)
     .then((r) => r.json())
     .then((data) => {
-      setQuestions(data[thema], randomNumber(data[thema].length))
-      dataQuestions = data[thema]
+      setQuestions(data, randomNumber(data.length))
+      dataQuestions = data
     })
     .catch((error) => {
       console.error("Error fetching questions:", error);
@@ -22,17 +24,19 @@ export const questionsApikey = (key, thema) => {
 };
 
 
-const setQuestions = (questions, index)=>{
-  const question = questions[index]
 
-  boardContainer.textContent = question.pergunta;
-  alternativeAText.textContent = question.alternativaA;
-  alternativeBText.textContent = question.alternativaB;
-  alternativeCText.textContent = question.alternativaC;
-  alternativeDText.textContent = question.alternativaD;
+export function setQuestions(questions, index) {
+  const question = questions[index];  
 
-  correctAsk = question.correta
-  console.log(correctAsk)
+  boardContainer.textContent = question.question;
+  alternativeAText.textContent = question.incorrectAnswers[0];
+  alternativeBText.textContent = question.correctAnswer;
+  alternativeCText.textContent = question.incorrectAnswers[1];
+  alternativeDText.textContent = question.incorrectAnswers[2];
+
+  correctAsk = question.correctAnswer
+
+  console.log(question.correctAnswer)
 }
 
 
@@ -46,5 +50,5 @@ export const randomNumber = (limite) => {
 export const nextQuestion = (data, index) =>{
   numberQuestions()
   dogeCoinsCounter()
-  setQuestions(data,index);
+  setQuestions(data, index);
 } 
