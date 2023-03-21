@@ -9,21 +9,20 @@ const alternativeDText = document.querySelector("#alternative-d");
 export let dataQuestions;
 export let correctAsk;
 
-
-export const questionsApikey = (thema) => {
-  const apiKey = `https://the-trivia-api.com/api/questions?limit=20&categories=${thema}`;
-  fetch(apiKey)
-    .then((r) => r.json())
-    .then((data) => {
-      setQuestions(data, randomNumber(data.length))
-      dataQuestions = data
-    })
-    .catch((error) => {
-      console.error("Error fetching questions:", error);
-    });
-};
+export const questionsApikey = async (thema) => {
+  try{
+    const apiKey = `https://the-trivia-api.com/api/questions?limit=20&categories=${thema}`;
+    const dataResponse = await fetch(apiKey)
+    const data = await dataResponse.json()
+  
+    setQuestions(data, randomNumber(data.length))
+    dataQuestions = data
 
 
+  }catch(erro){
+    console.error("Error fetching questions:", erro);
+  }
+}
 
 export function setQuestions(questions, index) {
   const question = questions[index];  
@@ -38,7 +37,6 @@ export function setQuestions(questions, index) {
 
   console.log(question.correctAnswer)
 }
-
 
 export const randomNumber = (limite) => {
   const numerosPossiveis = Array.from({length: limite}, (_, i) => i);
