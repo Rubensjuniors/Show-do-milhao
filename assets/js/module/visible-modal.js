@@ -36,6 +36,7 @@ const quit = ()=> {
     panelDesistir.innerText = (counterCoin.innerText)
   }
   desistirButton.addEventListener( 'click', quit)
+  desistirButton.addEventListener( 'touchstart', quit)
 
 
 

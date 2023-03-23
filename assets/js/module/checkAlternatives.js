@@ -1,4 +1,4 @@
-import {correctAsk, nextQuestion, dataQuestions, randomNumber,} from "./setQuestions.js";
+import {correctAsk, nextQuestion, dataQuestions,} from "./setQuestions.js";
 import { visibleModal } from "./visible-modal.js";
 
 
@@ -24,7 +24,7 @@ export function initCheck() {
       element.classList.add("green");
       setTimeout(() => {
         element.classList.remove("green");
-        nextQuestion(dataQuestions, randomNumber(dataQuestions.length));
+        nextQuestion(dataQuestions, Math.floor(Math.random() * dataQuestions.length));
       }, 600);
     } else {
       element.classList.add("red");
@@ -37,3 +37,5 @@ export function initCheck() {
     alt.addEventListener("click", selectAlt);
   });
 }
+
+

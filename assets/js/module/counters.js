@@ -30,8 +30,7 @@ export const dogeCoinsCounter = () => {
     counterCoin.textContent = currentCoins + 100000;
 
   } else {
-    counterCoin.textContent = currentCoins + 500000;
-
+    counterCoin.textContent = currentCoins + 1000000;
   }
 
   
