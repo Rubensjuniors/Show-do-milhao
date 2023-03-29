@@ -5,7 +5,7 @@ export const optionsConteiner = document.querySelector("#options-js");
 export const questionsConteiner = document.querySelector("#questions-js");
 const themasButton = document.querySelectorAll('.themas__buttons-js')
 
-export async function insertThemas(){
+export const insertThemas = async () => {
   const responseThema = await fetch('https://the-trivia-api.com/api/categories');
   const theme = await responseThema.json()
   
@@ -22,4 +22,7 @@ const selectThema = (event)=>{
   questionsApikey(selectedTheme)
   hiddenConteiner(optionsConteiner, questionsConteiner)
 }
-themasButton.forEach((button) => button.addEventListener("click", selectThema));
+themasButton.forEach((button) => {
+  button.addEventListener("click", selectThema)
+  button.addEventListener("touchstart", selectThema)
+});

@@ -19,23 +19,24 @@
   <main id="body">
     <section id="start-js" class="start ">
       <picture>
-        <img class="start__logo" src="./assets/img/logo.png" alt="Logo Show do Milhão" title="Feita por Eduardo Barbosa">
+        <img class="start__logo" src="./assets/img/logo.png" alt="Logo Show do Milhão"
+          title="Feita por Eduardo Barbosa">
       </picture>
       <button data-button="start" class="start__button button-general">Start</button>
 
-      <p class="copy">Logo Feita Por Eduardo Barbosa</p>
+      <p class="copy">Logo Made by Eduardo Barbosa</p>
     </section>
 
 
     <section id="options-js" class="options options--js hiden">
-        <h1 class="options__title">Escolha um tema</h1>
-        <ul class="themas__list">
-          <li><button class="button-general options__choose-button themas__buttons-js">Variado</button></li>
-          <li><button class="button-general options__choose-button themas__buttons-js">Comida</button></li>
-          <li><button class="button-general options__choose-button themas__buttons-js">Filmes e TV</button></li>
-          <li><button class="button-general options__choose-button themas__buttons-js">Historia</button></li>
-          <li><button class="button-general options__choose-button themas__buttons-js">Musicas</button></li>
-        </ul>
+      <h1 class="options__title">Select a Theme</h1>
+      <ul class="themas__list">
+        <li><button class="button-general options__choose-button themas__buttons-js">Varied</button></li>
+        <li><button class="button-general options__choose-button themas__buttons-js">Food</button></li>
+        <li><button class="button-general options__choose-button themas__buttons-js">Movies and TV</button></li>
+        <li><button class="button-general options__choose-button themas__buttons-js">History</button></li>
+        <li><button class="button-general options__choose-button themas__buttons-js">Music</button></li>
+      </ul>
     </section>
 
 
@@ -52,39 +53,29 @@
         </header>
 
         <div id="questions__board-js" class="questions__board"></div>
-        <ul class="questions__help">
-          <li>
-            <button  class="help__button help__button--js " data-card="help-picked"><img
-                src="./assets/img/icons/help-cards.png" alt="picked"></button>
-          </li>
 
-          <li>
-            <button class="help__button help__button--js" data-card="help-people"><img
-                src="./assets/img/icons/help-person.png" alt="Person"></button>
-          </li>
-        </ul>
       </div>
 
       <div class="questions__response-wrap">
 
-        <button  class="response__options response__options-js">
-            <span class="response__options--alternative">A.</span>
-            <div class="alternative__text" id="alternative-a"></div> 
+        <button class="response__options response__options-js">
+          <span class="response__options--alternative">A.</span>
+          <div class="alternative__text" id="alternative-a"></div>
         </button>
-        <button  class="response__options response__options-js">
-            <span class="response__options--alternative">B.</span>
-            <div class="alternative__text" id="alternative-b"></div>
+        <button class="response__options response__options-js">
+          <span class="response__options--alternative">B.</span>
+          <div class="alternative__text" id="alternative-b"></div>
         </button>
-        <button  class="response__options response__options-js">
-            <span class="response__options--alternative">C.</span>
-            <div class="alternative__text" id="alternative-c"></div>
+        <button class="response__options response__options-js">
+          <span class="response__options--alternative">C.</span>
+          <div class="alternative__text" id="alternative-c"></div>
         </button>
-        <button  class="response__options response__options-js">
-            <span class="response__options--alternative">D.</span>
-            <div class="alternative__text" id="alternative-d"></div>
+        <button class="response__options response__options-js">
+          <span class="response__options--alternative">D.</span>
+          <div class="alternative__text" id="alternative-d"></div>
         </button>
 
-        <button class="questions__desistir button-general button-desistir-js">Desistir</button>
+        <button class="questions__desistir button-general button-desistir-js">Quit</button>
       </div>
     </section>
 
@@ -97,73 +88,31 @@
   <div id="modal-js" class="modal hiden">
 
     <div class="modal__win hiden" data-modal="win">
-      <h1 class="modal__title win__title">Você Ganhou <span class="desistir__title-coin"> 1.000.000</span></h1>
+      <h1 class="modal__title win__title">You Win <span class="desistir__title-coin"> 1.000.000</span></h1>
       <picture class="win__gif">
         <img src="./assets/img/Gifs/_23024_10_orig.gif" alt="">
       </picture>
-      <button data-button="voltar" class="button-general win__button modal__button-js">Voltar</button>
+      <button data-button="voltar" class="button-general win__button modal__button-js">Back</button>
     </div>
 
     <div class="modal__erro hiden" data-modal="erro">
-      <h1 class="modal__title erro__title">Você Errou</h1>
+      <h1 class="modal__title erro__title">You Lost</h1>
       <div class="erro__gif">
         <img src="./assets/img/Gifs/happy-happy-dog.gif" alt="">
       </div>
-      <button data-button="voltar" class="button-general erro__button modal__button-js">Voltar</button>
+      <button data-button="voltar" class="button-general erro__button modal__button-js">back</button>
     </div>
 
     <div class="modal__desistir hiden" data-modal="desistir">
-      <h1 class="modal__title desistir__title">Você desitiu com <span class="desistir__title-coin  desistir__title-coin-js"></span></h1>
+      <h1 class="modal__title desistir__title">You left with <span
+          class="desistir__title-coin  desistir__title-coin-js"></span></h1>
       <picture class="desistir__gif">
         <img src="./assets/img/Gifs/dog-crying.gif" alt="gif_triste">
       </picture>
-      <button data-button="voltar" class="button-general desistir__button modal__button-js">Voltar</button>
-    </div>
-    
-
-    <div class="modal__picked hiden" data-modal="help-picked">
-      <button class="modal__close modal__close-js">X</button>
-      <h1 class="picked__title">Escolha uma carta</h1>
-      <ul class="picked__list">
-        <li class="picked__list--card">
-          <button data-carta="king"><img class="picked__card--img" src="./assets/img/icons/cards_help-rei.png" alt=""></button>
-          <span class="picked__card--alternative">?</span>
-        </li>
-        <li class="picked__list--card">
-          <button data-carta="dama"><img class="picked__card--img" src="./assets/img/icons/cards_help-dama.png" alt=""></button>
-          <span class="picked__card--alternative">?</span>
-        </li>
-        <li class="picked__list--card">
-          <button data-carta="king"><img class="picked__card--img" src="./assets/img/icons/cards_help-j.png" alt=""> </button>
-          <span class="picked__card--alternative">?</span>
-        </li>
-      </ul>
+      <button data-button="voltar" class="button-general desistir__button modal__button-js">Back</button>
     </div>
 
-    <div class="modal__people hiden" data-modal="help-people">
-      <button class="modal__close modal__close-js">X</button>
-      <h1 class="modal__title">Opiniões das pessoas</h1>
-      <ul class="people__list">
-        <li class="people__card">
-          <span class="people__card--alternative">?</span>
-          <div class="people__card--img">
-            <img src="./assets/img/icons/person-people.png" alt="">
-          </div>
-        </li>
-        <li class="people__card">
-          <span class="people__card--alternative">?</span>
-          <div class="people__card--img">
-            <img src="./assets/img/icons/person-people.png" alt="">
-          </div>
-        </li>
-        <li class="people__card">
-          <span class="people__card--alternative">?</span>
-          <div class="people__card--img">
-            <img src="./assets/img/icons/person-people.png" alt="">
-          </div>
-        </li>
-      </ul>
-    </div>
+
   </div>
 
   <script type="module" src="./assets/js/script.js"></script>
@@ -172,5 +121,3 @@
 </body>
 
 </html>
-
-

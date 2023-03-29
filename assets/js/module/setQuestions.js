@@ -23,7 +23,7 @@ export const questionsApikey = async (thema) => {
   }
 }
 
-export function setQuestions(questions, index) {
+export const setQuestions = (questions, index) => {
 
   const question = questions[index];           
   const alt = generateLetters(a, b, c, d);
@@ -35,7 +35,7 @@ export function setQuestions(questions, index) {
   alt[3].textContent = question.incorrectAnswers[2];
 
   correctAsk = question.correctAnswer
-  console.log(question.correctAnswer)
+
 }
 
 
@@ -45,7 +45,7 @@ export const nextQuestion = (data, index) =>{
   setQuestions(data, index);
 } 
 
-function generateLetters(a , b , c ,d) {
+const generateLetters = (a , b , c , d) =>{
   const letters = [a, b, c, d];
   let result = [];
   for (let i = 0; i < 4; i++) {

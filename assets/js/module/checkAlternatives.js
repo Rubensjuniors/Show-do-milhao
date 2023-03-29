@@ -2,9 +2,9 @@ import {correctAsk, nextQuestion, dataQuestions,} from "./setQuestions.js";
 import { visibleModal } from "./visible-modal.js";
 
 
-const alternativasButtons = Array.from(
-  document.querySelectorAll(".response__options-js")
-);
+const alternativasButtons = [...document.querySelectorAll(".response__options-js")]
+
+
 export function initCheck() {
   const selectAlt = (event) => {
     const boxAlt = event.currentTarget;
@@ -13,21 +13,24 @@ export function initCheck() {
   };
 
   const selectedAlternative = (element, selected, correct) => {
-    const corretaConteiner = alternativasButtons.filter((conteiner) => {
+    const classGreen = 'green';
+    const classRed = 'red';
+
+    const corretaConteiner = alternativasButtons.filter( conteiner => {
       const conteiners = conteiner.querySelector("div").innerHTML;
       if (conteiners === correct) {
-        return conteiner.classList.add("green");
+        return conteiner.classList.add(classGreen);
       }
     });
 
     if (selected === correct) {
-      element.classList.add("green");
+      element.classList.add(classGreen);
       setTimeout(() => {
-        element.classList.remove("green");
+        element.classList.remove(classGreen);
         nextQuestion(dataQuestions, Math.floor(Math.random() * dataQuestions.length));
       }, 600);
     } else {
-      element.classList.add("red");
+      element.classList.add(classRed);
       visibleModal("erro");
       corretaConteiner;
     }
@@ -35,6 +38,7 @@ export function initCheck() {
 
   alternativasButtons.forEach((alt) => {
     alt.addEventListener("click", selectAlt);
+    alt.addEventListener("touchstart", selectAlt);
   });
 }
 
